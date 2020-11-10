@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,151 +40,257 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_Gender = new System.Windows.Forms.TextBox();
             this.textBox_BirhDate = new System.Windows.Forms.TextBox();
+            this.btn_Notice = new System.Windows.Forms.Button();
+            this.btn_leavemessage = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "个人信息";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 45);
+            this.label2.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(7, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.Size = new System.Drawing.Size(66, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "学号：";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 86);
+            this.label3.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(7, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.Size = new System.Drawing.Size(66, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "姓名：";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 127);
+            this.label4.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(7, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 15);
+            this.label4.Size = new System.Drawing.Size(66, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "学院：";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 165);
+            this.label5.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(7, 162);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 15);
+            this.label5.Size = new System.Drawing.Size(66, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "专业：";
             // 
             // textBox_no
             // 
-            this.textBox_no.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox_no.Location = new System.Drawing.Point(50, 39);
+            this.textBox_no.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_no.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_no.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_no.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_no.Location = new System.Drawing.Point(76, 35);
             this.textBox_no.Name = "textBox_no";
             this.textBox_no.ReadOnly = true;
-            this.textBox_no.Size = new System.Drawing.Size(128, 25);
+            this.textBox_no.Size = new System.Drawing.Size(156, 21);
             this.textBox_no.TabIndex = 5;
+            this.textBox_no.TextChanged += new System.EventHandler(this.textBox_no_TextChanged);
             // 
             // textBox_Name
             // 
-            this.textBox_Name.Location = new System.Drawing.Point(50, 81);
+            this.textBox_Name.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_Name.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_Name.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_Name.Location = new System.Drawing.Point(76, 80);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.ReadOnly = true;
-            this.textBox_Name.Size = new System.Drawing.Size(128, 25);
+            this.textBox_Name.Size = new System.Drawing.Size(156, 21);
             this.textBox_Name.TabIndex = 6;
             // 
             // textBox_Academy
             // 
-            this.textBox_Academy.Location = new System.Drawing.Point(50, 122);
+            this.textBox_Academy.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_Academy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_Academy.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_Academy.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_Academy.Location = new System.Drawing.Point(76, 121);
             this.textBox_Academy.Name = "textBox_Academy";
             this.textBox_Academy.ReadOnly = true;
-            this.textBox_Academy.Size = new System.Drawing.Size(128, 25);
+            this.textBox_Academy.Size = new System.Drawing.Size(156, 21);
             this.textBox_Academy.TabIndex = 7;
             // 
             // textBox_Major
             // 
-            this.textBox_Major.Location = new System.Drawing.Point(50, 159);
+            this.textBox_Major.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_Major.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_Major.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_Major.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_Major.Location = new System.Drawing.Point(76, 161);
             this.textBox_Major.Name = "textBox_Major";
             this.textBox_Major.ReadOnly = true;
-            this.textBox_Major.Size = new System.Drawing.Size(128, 25);
+            this.textBox_Major.Size = new System.Drawing.Size(199, 21);
             this.textBox_Major.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(0, 206);
+            this.label6.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(7, 208);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 9;
             this.label6.Text = "性别：";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 247);
+            this.label7.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(7, 249);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 15);
+            this.label7.Size = new System.Drawing.Size(104, 19);
             this.label7.TabIndex = 10;
             this.label7.Text = "出生日期：";
             // 
             // textBox_Gender
             // 
-            this.textBox_Gender.Location = new System.Drawing.Point(50, 203);
+            this.textBox_Gender.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_Gender.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_Gender.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_Gender.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_Gender.Location = new System.Drawing.Point(75, 207);
             this.textBox_Gender.Name = "textBox_Gender";
             this.textBox_Gender.ReadOnly = true;
-            this.textBox_Gender.Size = new System.Drawing.Size(128, 25);
+            this.textBox_Gender.Size = new System.Drawing.Size(156, 21);
             this.textBox_Gender.TabIndex = 11;
             // 
             // textBox_BirhDate
             // 
-            this.textBox_BirhDate.Location = new System.Drawing.Point(88, 242);
+            this.textBox_BirhDate.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_BirhDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_BirhDate.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_BirhDate.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_BirhDate.Location = new System.Drawing.Point(104, 248);
             this.textBox_BirhDate.Name = "textBox_BirhDate";
             this.textBox_BirhDate.ReadOnly = true;
-            this.textBox_BirhDate.Size = new System.Drawing.Size(128, 25);
+            this.textBox_BirhDate.Size = new System.Drawing.Size(128, 21);
             this.textBox_BirhDate.TabIndex = 12;
+            // 
+            // btn_Notice
+            // 
+            this.btn_Notice.BackColor = System.Drawing.Color.SlateBlue;
+            this.btn_Notice.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_Notice.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Notice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Notice.Location = new System.Drawing.Point(288, 37);
+            this.btn_Notice.Name = "btn_Notice";
+            this.btn_Notice.Size = new System.Drawing.Size(161, 172);
+            this.btn_Notice.TabIndex = 13;
+            this.btn_Notice.Text = "已收公告";
+            this.btn_Notice.UseVisualStyleBackColor = false;
+            this.btn_Notice.Click += new System.EventHandler(this.btn_Notice_Click);
+            // 
+            // btn_leavemessage
+            // 
+            this.btn_leavemessage.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_leavemessage.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_leavemessage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_leavemessage.Location = new System.Drawing.Point(288, 206);
+            this.btn_leavemessage.Name = "btn_leavemessage";
+            this.btn_leavemessage.Size = new System.Drawing.Size(161, 173);
+            this.btn_leavemessage.TabIndex = 14;
+            this.btn_leavemessage.Text = "已收留言";
+            this.btn_leavemessage.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(500, 39);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(126, 81);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(500, 164);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(126, 81);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(721, 42);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(126, 81);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(721, 163);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(126, 81);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.MediumPurple;
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox_no);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.textBox_Name);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.textBox_Academy);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.textBox_BirhDate);
+            this.groupBox1.Controls.Add(this.textBox_Major);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.textBox_Gender);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(10, 39);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(281, 339);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "个人信息";
             // 
             // Enter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 365);
-            this.Controls.Add(this.textBox_BirhDate);
-            this.Controls.Add(this.textBox_Gender);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox_Major);
-            this.Controls.Add(this.textBox_Academy);
-            this.Controls.Add(this.textBox_Name);
-            this.Controls.Add(this.textBox_no);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1169, 525);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_leavemessage);
+            this.Controls.Add(this.btn_Notice);
             this.Name = "Enter";
             this.Text = "学生个人中心";
             this.Load += new System.EventHandler(this.Enter_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -198,5 +303,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox_Gender;
         private System.Windows.Forms.TextBox textBox_BirhDate;
+        private System.Windows.Forms.Button btn_Notice;
+        private System.Windows.Forms.Button btn_leavemessage;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

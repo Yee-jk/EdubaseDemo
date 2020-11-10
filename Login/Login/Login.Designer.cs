@@ -79,6 +79,7 @@
             this.textBox_Code.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_Code.Location = new System.Drawing.Point(230, 196);
             this.textBox_Code.Name = "textBox_Code";
+            this.textBox_Code.PasswordChar = '*';
             this.textBox_Code.Size = new System.Drawing.Size(172, 30);
             this.textBox_Code.TabIndex = 4;
             // 

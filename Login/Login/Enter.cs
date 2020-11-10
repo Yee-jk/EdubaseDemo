@@ -40,16 +40,20 @@ namespace Login
                 this.textBox_Name.Text = sqlHelper["Name"].ToString();
                 this.textBox_Academy.Text = sqlHelper["Academy"].ToString();
                 this.textBox_Major.Text = sqlHelper["Major"].ToString();
-                if (sqlHelper["Gender"].ToString()=="1")
-                {
-                    this.textBox_Gender.Text ="女";
-                }
-                else
-                {
-                    this.textBox_Gender.Text = "男";
-                }
+                this.textBox_Gender.Text = sqlHelper["Gender"].ToString();
                 this.textBox_BirhDate.Text = ((DateTime)sqlHelper["BirthDate"]).ToShortDateString();
             }
+        }
+
+        private void textBox_no_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Notice_Click(object sender, EventArgs e)
+        {
+            Notice notice = new Notice();
+            notice.Show();
         }
     }
 }
