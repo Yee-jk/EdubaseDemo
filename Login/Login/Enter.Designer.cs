@@ -42,7 +42,7 @@
             this.textBox_BirhDate = new System.Windows.Forms.TextBox();
             this.btn_Notice = new System.Windows.Forms.Button();
             this.btn_leavemessage = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_ScoreInquiry = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -209,18 +209,19 @@
             this.btn_leavemessage.Text = "已收留言";
             this.btn_leavemessage.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btn_ScoreInquiry
             // 
-            this.button3.Location = new System.Drawing.Point(500, 39);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 81);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_ScoreInquiry.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_ScoreInquiry.Location = new System.Drawing.Point(447, 37);
+            this.btn_ScoreInquiry.Name = "btn_ScoreInquiry";
+            this.btn_ScoreInquiry.Size = new System.Drawing.Size(137, 103);
+            this.btn_ScoreInquiry.TabIndex = 15;
+            this.btn_ScoreInquiry.Text = "课程成绩查询";
+            this.btn_ScoreInquiry.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(500, 164);
+            this.button4.Location = new System.Drawing.Point(816, 59);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(126, 81);
             this.button4.TabIndex = 16;
@@ -229,7 +230,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(721, 42);
+            this.button5.Location = new System.Drawing.Point(960, 185);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(126, 81);
             this.button5.TabIndex = 17;
@@ -238,7 +239,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(721, 163);
+            this.button6.Location = new System.Drawing.Point(827, 320);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(126, 81);
             this.button6.TabIndex = 18;
@@ -278,7 +279,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_ScoreInquiry);
             this.Controls.Add(this.btn_leavemessage);
             this.Controls.Add(this.btn_Notice);
             this.Name = "Enter";
@@ -305,7 +306,7 @@
         private System.Windows.Forms.TextBox textBox_BirhDate;
         private System.Windows.Forms.Button btn_Notice;
         private System.Windows.Forms.Button btn_leavemessage;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_ScoreInquiry;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;

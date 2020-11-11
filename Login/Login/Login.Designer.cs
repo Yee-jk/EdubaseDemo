@@ -35,6 +35,7 @@
             this.textBox_Code = new System.Windows.Forms.TextBox();
             this.button_Login = new System.Windows.Forms.Button();
             this.btn_SignIn = new System.Windows.Forms.Button();
+            this.btn_See = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -112,12 +113,24 @@
             this.btn_SignIn.UseVisualStyleBackColor = false;
             this.btn_SignIn.Click += new System.EventHandler(this.btn_SignIn_Click);
             // 
+            // btn_See
+            // 
+            this.btn_See.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_See.Location = new System.Drawing.Point(408, 195);
+            this.btn_See.Name = "btn_See";
+            this.btn_See.Size = new System.Drawing.Size(37, 31);
+            this.btn_See.TabIndex = 8;
+            this.btn_See.Text = "👁";
+            this.btn_See.UseVisualStyleBackColor = true;
+            this.btn_See.Click += new System.EventHandler(this.btn_See_Click);
+            // 
             // Login
             // 
             this.AcceptButton = this.button_Login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 376);
+            this.Controls.Add(this.btn_See);
             this.Controls.Add(this.btn_SignIn);
             this.Controls.Add(this.button_Login);
             this.Controls.Add(this.textBox_Code);
@@ -141,6 +154,7 @@
         private System.Windows.Forms.TextBox textBox_Code;
         private System.Windows.Forms.Button button_Login;
         private System.Windows.Forms.Button btn_SignIn;
+        private System.Windows.Forms.Button btn_See;
     }
 }
 

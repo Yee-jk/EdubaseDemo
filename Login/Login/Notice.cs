@@ -84,9 +84,8 @@ namespace Login
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            Enter BackEnter = new Enter();
-            BackEnter.Show();
-            this.Close();
+          
+
         }
     }
 }

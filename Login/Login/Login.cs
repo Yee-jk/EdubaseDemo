@@ -63,5 +63,19 @@ namespace Login
                 MessageBox.Show("注册失败");
             }
         }
+
+        private void btn_See_Click(object sender, EventArgs e)
+        {
+            if (textBox_Code.PasswordChar=='\0')
+            {
+                textBox_Code.PasswordChar = '*';
+            }
+            else
+            {
+                textBox_Code.PasswordChar = '\0';
+            }
+            
+            
+        }
     }
 }
