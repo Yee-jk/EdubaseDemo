@@ -54,6 +54,7 @@ namespace Login
         {
             Notice notice = new Notice();
             notice.Show();
+            this.Close();
         }
     }
 }

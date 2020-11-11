@@ -185,10 +185,10 @@
             // 
             // btn_Notice
             // 
-            this.btn_Notice.BackColor = System.Drawing.Color.SlateBlue;
+            this.btn_Notice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_Notice.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_Notice.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_Notice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Notice.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Notice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Notice.Location = new System.Drawing.Point(288, 37);
             this.btn_Notice.Name = "btn_Notice";
             this.btn_Notice.Size = new System.Drawing.Size(161, 172);
@@ -199,9 +199,9 @@
             // 
             // btn_leavemessage
             // 
-            this.btn_leavemessage.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_leavemessage.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_leavemessage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_leavemessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_leavemessage.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_leavemessage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_leavemessage.Location = new System.Drawing.Point(288, 206);
             this.btn_leavemessage.Name = "btn_leavemessage";
             this.btn_leavemessage.Size = new System.Drawing.Size(161, 173);

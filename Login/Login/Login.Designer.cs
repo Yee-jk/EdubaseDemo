@@ -34,6 +34,7 @@
             this.textBox_No = new System.Windows.Forms.TextBox();
             this.textBox_Code = new System.Windows.Forms.TextBox();
             this.button_Login = new System.Windows.Forms.Button();
+            this.btn_SignIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -73,6 +74,7 @@
             this.textBox_No.Name = "textBox_No";
             this.textBox_No.Size = new System.Drawing.Size(172, 30);
             this.textBox_No.TabIndex = 3;
+            this.textBox_No.TextChanged += new System.EventHandler(this.textBox_No_TextChanged);
             // 
             // textBox_Code
             // 
@@ -82,13 +84,14 @@
             this.textBox_Code.PasswordChar = '*';
             this.textBox_Code.Size = new System.Drawing.Size(172, 30);
             this.textBox_Code.TabIndex = 4;
+            this.textBox_Code.TextChanged += new System.EventHandler(this.textBox_Code_TextChanged);
             // 
             // button_Login
             // 
             this.button_Login.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button_Login.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_Login.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_Login.Location = new System.Drawing.Point(374, 272);
+            this.button_Login.Location = new System.Drawing.Point(327, 270);
             this.button_Login.Name = "button_Login";
             this.button_Login.Size = new System.Drawing.Size(75, 45);
             this.button_Login.TabIndex = 5;
@@ -96,11 +99,26 @@
             this.button_Login.UseVisualStyleBackColor = false;
             this.button_Login.Click += new System.EventHandler(this.button_Login_Click);
             // 
+            // btn_SignIn
+            // 
+            this.btn_SignIn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_SignIn.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_SignIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_SignIn.Location = new System.Drawing.Point(423, 270);
+            this.btn_SignIn.Name = "btn_SignIn";
+            this.btn_SignIn.Size = new System.Drawing.Size(75, 45);
+            this.btn_SignIn.TabIndex = 6;
+            this.btn_SignIn.Text = "注册";
+            this.btn_SignIn.UseVisualStyleBackColor = false;
+            this.btn_SignIn.Click += new System.EventHandler(this.btn_SignIn_Click);
+            // 
             // Login
             // 
+            this.AcceptButton = this.button_Login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 376);
+            this.Controls.Add(this.btn_SignIn);
             this.Controls.Add(this.button_Login);
             this.Controls.Add(this.textBox_Code);
             this.Controls.Add(this.textBox_No);
@@ -122,6 +140,7 @@
         private System.Windows.Forms.TextBox textBox_No;
         private System.Windows.Forms.TextBox textBox_Code;
         private System.Windows.Forms.Button button_Login;
+        private System.Windows.Forms.Button btn_SignIn;
     }
 }
 
