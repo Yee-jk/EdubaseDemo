@@ -43,10 +43,10 @@
             this.btn_Notice = new System.Windows.Forms.Button();
             this.btn_leavemessage = new System.Windows.Forms.Button();
             this.btn_ScoreInquiry = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_StudentAchievement = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Center = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,16 +134,17 @@
             this.textBox_Major.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_Major.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox_Major.Location = new System.Drawing.Point(76, 161);
+            this.textBox_Major.Multiline = true;
             this.textBox_Major.Name = "textBox_Major";
             this.textBox_Major.ReadOnly = true;
-            this.textBox_Major.Size = new System.Drawing.Size(199, 21);
+            this.textBox_Major.Size = new System.Drawing.Size(199, 25);
             this.textBox_Major.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(7, 208);
+            this.label6.Location = new System.Drawing.Point(7, 228);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 9;
@@ -153,7 +154,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(7, 249);
+            this.label7.Location = new System.Drawing.Point(7, 264);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 19);
             this.label7.TabIndex = 10;
@@ -165,7 +166,7 @@
             this.textBox_Gender.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Gender.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_Gender.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox_Gender.Location = new System.Drawing.Point(75, 207);
+            this.textBox_Gender.Location = new System.Drawing.Point(75, 226);
             this.textBox_Gender.Name = "textBox_Gender";
             this.textBox_Gender.ReadOnly = true;
             this.textBox_Gender.Size = new System.Drawing.Size(156, 21);
@@ -177,9 +178,10 @@
             this.textBox_BirhDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_BirhDate.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_BirhDate.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox_BirhDate.Location = new System.Drawing.Point(104, 248);
+            this.textBox_BirhDate.Location = new System.Drawing.Point(104, 263);
             this.textBox_BirhDate.Name = "textBox_BirhDate";
             this.textBox_BirhDate.ReadOnly = true;
+            this.textBox_BirhDate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_BirhDate.Size = new System.Drawing.Size(128, 21);
             this.textBox_BirhDate.TabIndex = 12;
             // 
@@ -189,7 +191,7 @@
             this.btn_Notice.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_Notice.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_Notice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Notice.Location = new System.Drawing.Point(288, 37);
+            this.btn_Notice.Location = new System.Drawing.Point(288, 84);
             this.btn_Notice.Name = "btn_Notice";
             this.btn_Notice.Size = new System.Drawing.Size(161, 172);
             this.btn_Notice.TabIndex = 13;
@@ -202,49 +204,23 @@
             this.btn_leavemessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_leavemessage.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_leavemessage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_leavemessage.Location = new System.Drawing.Point(288, 206);
+            this.btn_leavemessage.Location = new System.Drawing.Point(288, 251);
             this.btn_leavemessage.Name = "btn_leavemessage";
             this.btn_leavemessage.Size = new System.Drawing.Size(161, 173);
             this.btn_leavemessage.TabIndex = 14;
             this.btn_leavemessage.Text = "已收留言";
             this.btn_leavemessage.UseVisualStyleBackColor = false;
+            this.btn_leavemessage.Click += new System.EventHandler(this.btn_leavemessage_Click);
             // 
             // btn_ScoreInquiry
             // 
             this.btn_ScoreInquiry.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_ScoreInquiry.Location = new System.Drawing.Point(447, 37);
+            this.btn_ScoreInquiry.Location = new System.Drawing.Point(447, 84);
             this.btn_ScoreInquiry.Name = "btn_ScoreInquiry";
-            this.btn_ScoreInquiry.Size = new System.Drawing.Size(137, 103);
+            this.btn_ScoreInquiry.Size = new System.Drawing.Size(148, 112);
             this.btn_ScoreInquiry.TabIndex = 15;
             this.btn_ScoreInquiry.Text = "课程成绩查询";
             this.btn_ScoreInquiry.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(816, 59);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(126, 81);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(960, 185);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(126, 81);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(827, 320);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(126, 81);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -263,22 +239,51 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(10, 39);
+            this.groupBox1.Location = new System.Drawing.Point(12, 84);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(281, 339);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "个人信息";
             // 
+            // btn_StudentAchievement
+            // 
+            this.btn_StudentAchievement.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_StudentAchievement.Location = new System.Drawing.Point(447, 190);
+            this.btn_StudentAchievement.Name = "btn_StudentAchievement";
+            this.btn_StudentAchievement.Size = new System.Drawing.Size(148, 111);
+            this.btn_StudentAchievement.TabIndex = 20;
+            this.btn_StudentAchievement.Text = "学籍成绩";
+            this.btn_StudentAchievement.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Location = new System.Drawing.Point(447, 299);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(148, 125);
+            this.button2.TabIndex = 21;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btn_Center
+            // 
+            this.btn_Center.Location = new System.Drawing.Point(23, 25);
+            this.btn_Center.Name = "btn_Center";
+            this.btn_Center.Size = new System.Drawing.Size(89, 37);
+            this.btn_Center.TabIndex = 22;
+            this.btn_Center.Text = "个人中心";
+            this.btn_Center.UseVisualStyleBackColor = true;
+            this.btn_Center.Click += new System.EventHandler(this.btn_Center_Click);
+            // 
             // Enter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 525);
+            this.Controls.Add(this.btn_Center);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_StudentAchievement);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.btn_ScoreInquiry);
             this.Controls.Add(this.btn_leavemessage);
             this.Controls.Add(this.btn_Notice);
@@ -307,9 +312,9 @@
         private System.Windows.Forms.Button btn_Notice;
         private System.Windows.Forms.Button btn_leavemessage;
         private System.Windows.Forms.Button btn_ScoreInquiry;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_StudentAchievement;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Center;
     }
 }

@@ -8,8 +8,7 @@ namespace Login
     {
         public Notice()
         {
-            InitializeComponent();
-            this.FormClosed += (_, __) =>
+            InitializeComponent(); this.FormClosed += (_, __) =>
             {
                 if (Application.OpenForms.Count == 0)
                 {

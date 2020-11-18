@@ -140,6 +140,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "综合教务管理系统";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

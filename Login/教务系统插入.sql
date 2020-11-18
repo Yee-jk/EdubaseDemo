@@ -97,6 +97,7 @@ VALUES
 	,(   '5',  'Web程序设计', 'A008', '沈士根', '清华大学出版社',   49.0, NULL)
 	,(   '6',  'C#语言程序设计基础实验指导（第3版）', 'A009', '郑宇军', '清华大学出版社',  24, NULL)
 	,(   '7',  '马克思主义基本原理概论 ', 'D001', '张雷声', '中国人民大学出版社',  30, NULL);
+DELETE FROM dbo.tb_LeaveMessage;
 INSERT dbo.tb_LeaveMessage
 (
     No,
@@ -106,7 +107,7 @@ INSERT dbo.tb_LeaveMessage
     Sendtime
 )
 VALUES
-	(   '1',     '福建省计算机等级考试考生须知',      '留言',     '林云燕',   2015-12-22 );
+	(   '1',     '福建省计算机等级考试考生须知',      '留言',     '林云燕',   '2015-12-22' );
 INSERT dbo.tb_Notice
 (
     No,
@@ -121,21 +122,19 @@ VALUES
 	,(   '3',    '2019-2020-2选课通知',    '公告',     '教务处',   GETDATE() )
 	,(   '4',    '2020年英语竞赛报名通知',    '公告',     '教务处',   GETDATE() )
 	,(   '5',    '2019-2020-1评教通知',    '公告',     '教务处',   GETDATE() );
-INSERT dbo.tb_StudentCard
-(
-    No,
-    Academy,
-    Major,
-    Gender,
-    BirthDate
+DELETE FROM dbo.tb_StudentCard;
+INSERT tb_StudentCard
+( 
+	No,
+	Name,
+	Academy,
+	Major,
+	Gender,
+	BirthDate
 )
 VALUES
-(   '3190707045',       -- No - char(10)
-    '人文与管理学院',       -- Academy - varchar(20)
-    '信息管理与信息系统',       -- Major - varchar(40)
-    0,     -- Gender - bit
-    2020-10-29 -- BirthDate - datetime
-    );
+('3190707045','蔡雪红','人文与管理学院','2019级信息管理与信息系统','女','2000-10-29');
+
 INSERT dbo.tb_StudySituation
 (
     No,

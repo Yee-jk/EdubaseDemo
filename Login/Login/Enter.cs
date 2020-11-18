@@ -53,8 +53,19 @@ namespace Login
         private void btn_Notice_Click(object sender, EventArgs e)
         {
             Notice notice = new Notice();
-            notice.Show();
-            this.Close();
+            notice.Show();    
+        }
+
+        private void btn_leavemessage_Click(object sender, EventArgs e)
+        {
+            LeaveMessage leaveMessage = new LeaveMessage();
+            leaveMessage.Show();
+        }
+
+        private void btn_Center_Click(object sender, EventArgs e)
+        {
+            Center center = new Center();
+            center.Show();
         }
     }
 }

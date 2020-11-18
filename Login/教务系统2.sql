@@ -77,6 +77,9 @@ CREATE TABLE tb_StudentCard
 		CONSTRAINT ck_StudentCard_No
 		CHECK(No LIKE REPLICATE('[0-9]',10))
 		NOT NULL
+	,Name
+		VARCHAR(20)
+		NOT NULL
 	,Academy
 		VARCHAR(20)
 		NOT NULL
@@ -84,7 +87,7 @@ CREATE TABLE tb_StudentCard
 		VARCHAR(40)
 		NOT NULL
 	,Gender
-		BIT
+		CHAR(2)
         NOT NULL
 	,BirthDate
 		DATETIME

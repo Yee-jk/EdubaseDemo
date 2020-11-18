@@ -86,6 +86,12 @@
     <Compile Include="Enter.Designer.cs">
       <DependentUpon>Enter.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeaveMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveMessage.Designer.cs">
+      <DependentUpon>LeaveMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,8 +112,17 @@
     <Compile Include="ScoreInquiry.Designer.cs">
       <DependentUpon>ScoreInquiry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Center.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Center.Designer.cs">
+      <DependentUpon>Center.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Enter.resx">
       <DependentUpon>Enter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveMessage.resx">
+      <DependentUpon>LeaveMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -126,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="ScoreInquiry.resx">
       <DependentUpon>ScoreInquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Center.resx">
+      <DependentUpon>Center.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
