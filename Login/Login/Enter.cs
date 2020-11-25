@@ -27,6 +27,7 @@ namespace Login
 
         private void Enter_Load(object sender, EventArgs e)
         {
+            this.btn_Center.Focus();
             string Search = $@"SELECT
 		                    *
 	                        FROM dbo.tb_StudentCard
@@ -66,6 +67,7 @@ namespace Login
         {
             Center center = new Center();
             center.Show();
+            
         }
     }
 }

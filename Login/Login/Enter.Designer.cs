@@ -47,6 +47,11 @@
             this.btn_StudentAchievement = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_Center = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,10 +97,10 @@
             // 
             // textBox_no
             // 
-            this.textBox_no.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_no.BackColor = System.Drawing.SystemColors.Control;
             this.textBox_no.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_no.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_no.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_no.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox_no.Location = new System.Drawing.Point(76, 35);
             this.textBox_no.Name = "textBox_no";
             this.textBox_no.ReadOnly = true;
@@ -105,10 +110,10 @@
             // 
             // textBox_Name
             // 
-            this.textBox_Name.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_Name.BackColor = System.Drawing.SystemColors.Control;
             this.textBox_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Name.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Name.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_Name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox_Name.Location = new System.Drawing.Point(76, 80);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.ReadOnly = true;
@@ -117,10 +122,10 @@
             // 
             // textBox_Academy
             // 
-            this.textBox_Academy.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_Academy.BackColor = System.Drawing.SystemColors.Control;
             this.textBox_Academy.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Academy.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Academy.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_Academy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox_Academy.Location = new System.Drawing.Point(76, 121);
             this.textBox_Academy.Name = "textBox_Academy";
             this.textBox_Academy.ReadOnly = true;
@@ -129,10 +134,10 @@
             // 
             // textBox_Major
             // 
-            this.textBox_Major.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_Major.BackColor = System.Drawing.SystemColors.Control;
             this.textBox_Major.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Major.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Major.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_Major.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox_Major.Location = new System.Drawing.Point(76, 161);
             this.textBox_Major.Multiline = true;
             this.textBox_Major.Name = "textBox_Major";
@@ -162,10 +167,10 @@
             // 
             // textBox_Gender
             // 
-            this.textBox_Gender.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_Gender.BackColor = System.Drawing.SystemColors.Control;
             this.textBox_Gender.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Gender.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Gender.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_Gender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox_Gender.Location = new System.Drawing.Point(75, 226);
             this.textBox_Gender.Name = "textBox_Gender";
             this.textBox_Gender.ReadOnly = true;
@@ -174,10 +179,10 @@
             // 
             // textBox_BirhDate
             // 
-            this.textBox_BirhDate.BackColor = System.Drawing.Color.MediumPurple;
+            this.textBox_BirhDate.BackColor = System.Drawing.SystemColors.Control;
             this.textBox_BirhDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_BirhDate.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_BirhDate.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_BirhDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox_BirhDate.Location = new System.Drawing.Point(104, 263);
             this.textBox_BirhDate.Name = "textBox_BirhDate";
             this.textBox_BirhDate.ReadOnly = true;
@@ -224,7 +229,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.MediumPurple;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox_no);
             this.groupBox1.Controls.Add(this.label3);
@@ -238,7 +243,7 @@
             this.groupBox1.Controls.Add(this.textBox_Gender);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(12, 84);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(281, 339);
@@ -263,6 +268,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 125);
             this.button2.TabIndex = 21;
+            this.button2.Text = "教学周历";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // btn_Center
@@ -275,11 +281,66 @@
             this.btn_Center.UseVisualStyleBackColor = true;
             this.btn_Center.Click += new System.EventHandler(this.btn_Center_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(593, 84);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(171, 217);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "选课中心";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button3.Location = new System.Drawing.Point(593, 299);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(171, 125);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "考试成绩";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button4.Location = new System.Drawing.Point(761, 84);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(148, 112);
+            this.button4.TabIndex = 25;
+            this.button4.Text = "授课计划查询";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button5.Location = new System.Drawing.Point(761, 190);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(148, 111);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "学生评教";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button6.Location = new System.Drawing.Point(761, 298);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(148, 125);
+            this.button6.TabIndex = 27;
+            this.button6.Text = "学籍卡片";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // Enter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 525);
+            this.ClientSize = new System.Drawing.Size(978, 493);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Center);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_StudentAchievement);
@@ -316,5 +377,10 @@
         private System.Windows.Forms.Button btn_StudentAchievement;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Center;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

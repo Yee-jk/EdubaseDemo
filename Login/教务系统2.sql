@@ -134,6 +134,9 @@ CREATE TABLE tb_TrainProgram
 	,Title
 		VARCHAR(40)
 		NOT NULL
+	,Operation
+		CHAR(4)
+		NOT NULL
 	);
 IF OBJECT_ID('tb_StudySituation')IS NOT NULL
 	DROP TABLE tb_StudySituation;
@@ -204,4 +207,38 @@ CREATE TABLE tb_DiplomaProjectTopic
 		VARCHAR(20)
 	,LimitNumber
 		VARCHAR(3)
+	);
+IF OBJECT_ID('tb_CourseGrade')IS NOT NULL
+	DROP TABLE tb_CourseGrade;
+GO
+CREATE TABLE tb_CourseGrade
+	(Term
+		VARCHAR(20)
+		NOT NULL
+	,CourseNo
+		VARCHAR(10)
+		CONSTRAINT pk_CourseGrade_CourseNo
+		PRIMARY KEY(CourseNo)
+		NOT NULL
+	,CourseName
+		VARCHAR(40)
+		NOT NULL
+	,Grade
+		Decimal
+		NOT NULL
+	,Credit
+		Float
+		NOT NULL
+	,TotalHour
+		VARCHAR(2)
+		NOT NULL
+	,ExamWay
+		VARCHAR(10)
+		NOT NULL
+	,CourseAttribute
+		CHAR(4)
+		NOT NULL
+	,CourseNature
+		VARCHAR(20)
+		NOT NULL
 	);
