@@ -69,5 +69,10 @@ namespace Login
             center.Show();
             
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
