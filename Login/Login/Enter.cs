@@ -65,7 +65,7 @@ namespace Login
 
         private void btn_Center_Click(object sender, EventArgs e)
         {
-            Center center = new Center();
+            Center center = new Center(textBox_no.Text);
             center.Show();
             
         }
@@ -73,6 +73,17 @@ namespace Login
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PB_Notice_Click(object sender, EventArgs e)
+        {
+            Center center = new Center();
+            center.Show();
         }
     }
 }

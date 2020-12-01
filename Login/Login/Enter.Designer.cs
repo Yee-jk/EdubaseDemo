@@ -43,25 +43,39 @@
             this.textBox_BirhDate = new System.Windows.Forms.TextBox();
             this.btn_Notice = new System.Windows.Forms.Button();
             this.btn_leavemessage = new System.Windows.Forms.Button();
-            this.btn_ScoreInquiry = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_StudentAchievement = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_Center = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.PB_Notice = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Notice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(7, 36);
             this.label2.Name = "label2";
@@ -72,6 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(7, 79);
             this.label3.Name = "label3";
@@ -101,7 +116,7 @@
             // 
             // textBox_no
             // 
-            this.textBox_no.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox_no.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox_no.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_no.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_no.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -114,7 +129,7 @@
             // 
             // textBox_Name
             // 
-            this.textBox_Name.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox_Name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Name.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_Name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -126,7 +141,7 @@
             // 
             // textBox_Academy
             // 
-            this.textBox_Academy.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox_Academy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox_Academy.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Academy.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_Academy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -138,7 +153,7 @@
             // 
             // textBox_Major
             // 
-            this.textBox_Major.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox_Major.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox_Major.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Major.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_Major.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -171,7 +186,7 @@
             // 
             // textBox_Gender
             // 
-            this.textBox_Gender.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox_Gender.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox_Gender.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Gender.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_Gender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -183,7 +198,7 @@
             // 
             // textBox_BirhDate
             // 
-            this.textBox_BirhDate.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox_BirhDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox_BirhDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_BirhDate.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_BirhDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -200,7 +215,7 @@
             this.btn_Notice.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_Notice.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_Notice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Notice.Location = new System.Drawing.Point(288, 84);
+            this.btn_Notice.Location = new System.Drawing.Point(1172, 25);
             this.btn_Notice.Name = "btn_Notice";
             this.btn_Notice.Size = new System.Drawing.Size(161, 172);
             this.btn_Notice.TabIndex = 13;
@@ -213,7 +228,7 @@
             this.btn_leavemessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_leavemessage.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_leavemessage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_leavemessage.Location = new System.Drawing.Point(288, 251);
+            this.btn_leavemessage.Location = new System.Drawing.Point(1172, 168);
             this.btn_leavemessage.Name = "btn_leavemessage";
             this.btn_leavemessage.Size = new System.Drawing.Size(161, 173);
             this.btn_leavemessage.TabIndex = 14;
@@ -221,19 +236,9 @@
             this.btn_leavemessage.UseVisualStyleBackColor = false;
             this.btn_leavemessage.Click += new System.EventHandler(this.btn_leavemessage_Click);
             // 
-            // btn_ScoreInquiry
-            // 
-            this.btn_ScoreInquiry.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_ScoreInquiry.Location = new System.Drawing.Point(447, 84);
-            this.btn_ScoreInquiry.Name = "btn_ScoreInquiry";
-            this.btn_ScoreInquiry.Size = new System.Drawing.Size(148, 112);
-            this.btn_ScoreInquiry.TabIndex = 15;
-            this.btn_ScoreInquiry.Text = "课程成绩查询";
-            this.btn_ScoreInquiry.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox_no);
             this.groupBox1.Controls.Add(this.label3);
@@ -248,36 +253,16 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(12, 84);
+            this.groupBox1.Location = new System.Drawing.Point(122, 115);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(281, 339);
+            this.groupBox1.Size = new System.Drawing.Size(331, 339);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "个人信息";
             // 
-            // btn_StudentAchievement
-            // 
-            this.btn_StudentAchievement.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_StudentAchievement.Location = new System.Drawing.Point(447, 190);
-            this.btn_StudentAchievement.Name = "btn_StudentAchievement";
-            this.btn_StudentAchievement.Size = new System.Drawing.Size(148, 111);
-            this.btn_StudentAchievement.TabIndex = 20;
-            this.btn_StudentAchievement.Text = "学籍成绩";
-            this.btn_StudentAchievement.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(447, 299);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 125);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "教学周历";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // btn_Center
             // 
-            this.btn_Center.Location = new System.Drawing.Point(23, 25);
+            this.btn_Center.Location = new System.Drawing.Point(12, 133);
             this.btn_Center.Name = "btn_Center";
             this.btn_Center.Size = new System.Drawing.Size(89, 37);
             this.btn_Center.TabIndex = 22;
@@ -285,92 +270,168 @@
             this.btn_Center.UseVisualStyleBackColor = true;
             this.btn_Center.Click += new System.EventHandler(this.btn_Center_Click);
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(270, 348);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(171, 125);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "考试成绩";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(761, 84);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 112);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "授课计划查询";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button5.Location = new System.Drawing.Point(761, 190);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 111);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "学生评教";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.Location = new System.Drawing.Point(761, 298);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(148, 125);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "学籍卡片";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(593, 84);
+            this.pictureBox1.Location = new System.Drawing.Point(453, 124);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 217);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 330);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // pictureBox3
             // 
-            this.pictureBox2.Image = global::Login.Properties.Resources.考试成绩;
-            this.pictureBox2.Location = new System.Drawing.Point(593, 276);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(171, 148);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(113, 451);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(178, 167);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(285, 451);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(194, 167);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 31;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(469, 452);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(194, 167);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 32;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(653, 123);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(211, 166);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 33;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(651, 291);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(213, 159);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 34;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(667, 451);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(212, 167);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox8.TabIndex = 35;
+            this.pictureBox8.TabStop = false;
+            // 
+            // PB_Notice
+            // 
+            this.PB_Notice.Image = ((System.Drawing.Image)(resources.GetObject("PB_Notice.Image")));
+            this.PB_Notice.Location = new System.Drawing.Point(867, 123);
+            this.PB_Notice.Name = "PB_Notice";
+            this.PB_Notice.Size = new System.Drawing.Size(400, 166);
+            this.PB_Notice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.PB_Notice.TabIndex = 36;
+            this.PB_Notice.TabStop = false;
+            this.PB_Notice.Click += new System.EventHandler(this.PB_Notice_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(866, 291);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(401, 159);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox9.TabIndex = 37;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(884, 451);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(189, 167);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 38;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(1078, 451);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(188, 167);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox11.TabIndex = 39;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(787, 95);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox12.TabIndex = 40;
+            this.pictureBox12.TabStop = false;
             // 
             // Enter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 504);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1355, 670);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.PB_Notice);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_Center);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn_StudentAchievement);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_ScoreInquiry);
             this.Controls.Add(this.btn_leavemessage);
             this.Controls.Add(this.btn_Notice);
-            this.Controls.Add(this.pictureBox2);
             this.Name = "Enter";
             this.Text = "学生个人中心";
             this.Load += new System.EventHandler(this.Enter_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Notice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -390,16 +451,19 @@
         private System.Windows.Forms.TextBox textBox_BirhDate;
         private System.Windows.Forms.Button btn_Notice;
         private System.Windows.Forms.Button btn_leavemessage;
-        private System.Windows.Forms.Button btn_ScoreInquiry;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_StudentAchievement;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Center;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox PB_Notice;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }

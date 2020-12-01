@@ -5,10 +5,15 @@ using SmartLinli.DatabaseDevelopement;
 namespace Login
 {
     public partial class Center : Form
-    {       
+    {
+        private string Studentid;
         public Center()
         {
             InitializeComponent();
+        }
+        public Center(String StudentNo) : this()
+        {
+            Studentid = StudentNo;
         }
 
         private void dgv_Notice_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -70,6 +75,7 @@ namespace Login
                 dgv_Notice.Rows[index1].Cells[2].Value = sqlHelper1["Type"].ToString();
                 dgv_Notice.Rows[index1].Cells[3].Value = sqlHelper1["Sender"].ToString();
                 dgv_Notice.Rows[index1].Cells[4].Value = sqlHelper1["SendTime"].ToString();
+                dgv_Notice.Rows[index1].Cells[5].Value = sqlHelper1["Status"].ToString();
             }
         }
 
@@ -222,6 +228,10 @@ namespace Login
                     }
                     else
                     {
+                        sqlHelper.QuickSubmit($@"UPDATE dbo.tb_Student SET
+                                                      Code='{tb_NewCode.Text.ToString()}'
+                                                 WHERE
+                                                      dbo.tb_Student.No='3190707045';");
                         MessageBox.Show("保存成功！");
                     }
                 }
@@ -322,6 +332,45 @@ namespace Login
         {
             TeachingWeek teachingWeek = new TeachingWeek();
             teachingWeek.Show();
+        }
+
+        private void dgv_Notice_DoubleClick(object sender, EventArgs e)
+        {            
+            
+        }
+
+        private void dgv_Notice_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                string comandText =
+                    $@"UPDATE tb_Notice
+                    SET Status='已读'
+                    WHERE StudentNo='3190707045' AND No={e.RowIndex + 1};";
+                SqlHelper sqlHelper = new SqlHelper();
+                int rowAffected = sqlHelper.QuickSubmit(comandText);
+                if (rowAffected == 1)
+                {
+                    this.dgv_Notice.Rows[e.RowIndex].Cells[5].Value = "已读";
+                }
+            }
+        }
+
+        private void dgv_LeaveMessage_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                string comandText =
+                    $@"UPDATE tb_Notice
+                    SET Status='已读'
+                    WHERE StudentNo='3190707045' AND No={e.RowIndex + 1};";
+                SqlHelper sqlHelper = new SqlHelper();
+                int rowAffected = sqlHelper.QuickSubmit(comandText);
+                if (rowAffected == 1)
+                {
+                    this.dgv_Notice.Rows[e.RowIndex].Cells[5].Value = "已读";
+                }
+            }
         }
     }
     }
