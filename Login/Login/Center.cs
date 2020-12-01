@@ -372,5 +372,41 @@ namespace Login
                 }
             }
         }
+
+        private void cb_TermYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_SearchChooseCourse_Click(object sender, EventArgs e)
+        {
+            cb_TermYear.SelectedIndex = 1;
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            if (cb_Type.SelectedItem==null)
+            {
+                MessageBox.Show("选课类别不能为空!");
+            }
+            if (cb_TermYear.SelectedItem.ToString() == "2020-2021-1")
+            {
+                string Search = $@"
+                                SELECT *
+                                FROM tb_PublicCourse ";
+                SqlHelper sqlHelper = new SqlHelper();
+                sqlHelper.QuickRead(Search);
+                while (sqlHelper.HasRecord)
+                {
+                    int index = this.ShowPublicCourse.Rows.Add();
+                    ShowPublicCourse.Rows[index].Cells[0].Value = sqlHelper["No"].ToString();
+                    ShowPublicCourse.Rows[index].Cells[1].Value = sqlHelper["Name"].ToString();
+                    ShowPublicCourse.Rows[index].Cells[2].Value = sqlHelper["Credit"].ToString();
+                    ShowPublicCourse.Rows[index].Cells[3].Value = sqlHelper["Hour"].ToString();
+                    ShowPublicCourse.Rows[index].Cells[4].Value = sqlHelper["ExamType"].ToString();
+                    ShowPublicCourse.Rows[index].Cells[5].Value = sqlHelper["StartTime"].ToString();
+                }
+            }
+        }
     }
     }
