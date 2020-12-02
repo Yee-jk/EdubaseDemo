@@ -29,7 +29,31 @@ CREATE TABLE tb_Notice
 		REFERENCES dbo.tb_Student(No)
 		NOT NULL
 	);
-
+IF OBJECT_ID('tb_PublicCourse')IS NOT NULL
+	DROP TABLE tb_PublicCourse;
+GO
+CREATE TABLE tb_PublicCourse
+	(No
+		CHAR(4)
+		CONSTRAINT pk_PublicCourse_No
+		PRIMARY KEY(No)
+		NOT NULL
+	,Name
+		VARCHAR(20)
+		NOT NULL
+	,Credit
+		FLOAT
+		NOT NULL
+	,Hour
+		FLOAT
+		NOT NULL
+	,ExamType
+		VARCHAR(10)
+		NOT NULL
+	,StartTime
+		CHAR(11)
+		NOT NULL
+	)
 
 
 
@@ -236,4 +260,20 @@ VALUES
 	('2019-2020-1','N2060089','英语1',80,4,'64','考试','必修','通识教育课'),
 	('2019-2020-1','N2060162','计算机科学导论',85,3,'48','考试','必修','学科基础课'),
 	('2019-2020-1','N2060238','C语言程序设计',61,4.5,'72','操作','必修','学科基础课');
+INSERT dbo.tb_PublicCourse
+(
+    No,
+    Name,
+    Credit,
+    Hour,
+    ExamType,
+	StartTime
+)
+VALUES
+	(   'P001',   '跨文化电影解读',   2.0, 32.0,  '论文' ,'2020-2021-1'  ),
+	 (   'P002',   '六级英语阅读写作',   2.0, 32.0,  '笔试','2020-2021-1'    ),
+	 (   'P003',   '葡萄酒的文化与鉴赏',   2.0, 32.0,  '论文' ,'2020-2021-1'   ),
+	 (   'P004',   '面试技巧讲解',   2.0, 32.0,  '论文' ,'2020-2021-1'   ),
+	 (   'P005',   '创业学',   1.5, 24.0,  '论文' ,'2020-2021-1'   ),
+	 (   'P006',   '经络养生',   1.0, 16.0,  '笔试' ,'2020-2021-1'   );
 

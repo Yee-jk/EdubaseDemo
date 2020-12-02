@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl_Center = new System.Windows.Forms.TabControl();
             this.tab_MyDesk = new System.Windows.Forms.TabPage();
             this.gb_ModifyCode = new System.Windows.Forms.GroupBox();
@@ -174,33 +174,19 @@
             this.btn_infoManagement = new System.Windows.Forms.Button();
             this.btn_StudentCard = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.gb_SearchCourse = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.cb_Type = new System.Windows.Forms.ComboBox();
+            this.cb_TermYear = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.ShowPublicCourse = new System.Windows.Forms.DataGridView();
             this.dgv_TrainProgram = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.标题 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.cb_ChooseType = new System.Windows.Forms.ComboBox();
-            this.cb_SchoolSemester = new System.Windows.Forms.ComboBox();
-            this.button28 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button27 = new System.Windows.Forms.Button();
@@ -229,21 +215,24 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.npgsqlCommand1 = new Npgsql.NpgsqlCommand();
-            this.gb_SearchCourse = new System.Windows.Forms.GroupBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.cb_TermYear = new System.Windows.Forms.ComboBox();
-            this.cb_Type = new System.Windows.Forms.ComboBox();
-            this.BtnSearch = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.ShowPublicCourse = new System.Windows.Forms.DataGridView();
-            this.Column60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dgv_HasChoose = new System.Windows.Forms.DataGridView();
+            this.btn_Choose = new System.Windows.Forms.Button();
+            this.btn_Back = new System.Windows.Forms.Button();
+            this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CourseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl_Center.SuspendLayout();
             this.tab_MyDesk.SuspendLayout();
             this.gb_ModifyCode.SuspendLayout();
@@ -266,16 +255,15 @@
             this.gb_MyGrade.SuspendLayout();
             this.gb_StudentManagement.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.gb_SearchCourse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowPublicCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TrainProgram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.gb_TrainProgram.SuspendLayout();
-            this.gb_SearchCourse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ShowPublicCourse)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HasChoose)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_Center
@@ -526,14 +514,14 @@
             // dgv_Notice
             // 
             this.dgv_Notice.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Notice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Notice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle50;
             this.dgv_Notice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Notice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.序号,
@@ -542,24 +530,24 @@
             this.Column3,
             this.Column4,
             this.操作});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Notice.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Notice.DefaultCellStyle = dataGridViewCellStyle52;
             this.dgv_Notice.Location = new System.Drawing.Point(232, 25);
             this.dgv_Notice.Name = "dgv_Notice";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Notice.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Notice.RowHeadersDefaultCellStyle = dataGridViewCellStyle53;
             this.dgv_Notice.RowTemplate.Height = 27;
             this.dgv_Notice.Size = new System.Drawing.Size(1135, 259);
             this.dgv_Notice.TabIndex = 3;
@@ -569,8 +557,8 @@
             // 
             // 序号
             // 
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.序号.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.序号.DefaultCellStyle = dataGridViewCellStyle51;
             this.序号.HeaderText = "序号";
             this.序号.Name = "序号";
             this.序号.ReadOnly = true;
@@ -824,14 +812,14 @@
             // dgv_LeaveMessage
             // 
             this.dgv_LeaveMessage.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_LeaveMessage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_LeaveMessage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle54;
             this.dgv_LeaveMessage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_LeaveMessage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -840,24 +828,24 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.Column59});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_LeaveMessage.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle55.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle55.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle55.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_LeaveMessage.DefaultCellStyle = dataGridViewCellStyle55;
             this.dgv_LeaveMessage.Location = new System.Drawing.Point(234, 337);
             this.dgv_LeaveMessage.Name = "dgv_LeaveMessage";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_LeaveMessage.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle56.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle56.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_LeaveMessage.RowHeadersDefaultCellStyle = dataGridViewCellStyle56;
             this.dgv_LeaveMessage.RowTemplate.Height = 27;
             this.dgv_LeaveMessage.Size = new System.Drawing.Size(1133, 176);
             this.dgv_LeaveMessage.TabIndex = 4;
@@ -1587,16 +1575,13 @@
             this.tabPage3.AllowDrop = true;
             this.tabPage3.AutoScroll = true;
             this.tabPage3.Controls.Add(this.gb_SearchCourse);
-            this.tabPage3.Controls.Add(this.ShowPublicCourse);
-            this.tabPage3.Controls.Add(this.dgv_TrainProgram);
-            this.tabPage3.Controls.Add(this.dataGridView2);
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.groupBox8);
+            this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Controls.Add(this.label20);
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Controls.Add(this.gb_TrainProgram);
+            this.tabPage3.Controls.Add(this.dgv_TrainProgram);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -1605,6 +1590,113 @@
             this.tabPage3.Text = "培养管理";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // gb_SearchCourse
+            // 
+            this.gb_SearchCourse.Controls.Add(this.label32);
+            this.gb_SearchCourse.Controls.Add(this.label31);
+            this.gb_SearchCourse.Controls.Add(this.BtnSearch);
+            this.gb_SearchCourse.Controls.Add(this.cb_Type);
+            this.gb_SearchCourse.Controls.Add(this.cb_TermYear);
+            this.gb_SearchCourse.Controls.Add(this.label30);
+            this.gb_SearchCourse.Controls.Add(this.label29);
+            this.gb_SearchCourse.Location = new System.Drawing.Point(431, 32);
+            this.gb_SearchCourse.Name = "gb_SearchCourse";
+            this.gb_SearchCourse.Size = new System.Drawing.Size(496, 208);
+            this.gb_SearchCourse.TabIndex = 19;
+            this.gb_SearchCourse.TabStop = false;
+            this.gb_SearchCourse.Text = "查询选课课程";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.Color.Red;
+            this.label32.Location = new System.Drawing.Point(350, 89);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(15, 15);
+            this.label32.TabIndex = 6;
+            this.label32.Text = "*";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.Color.Red;
+            this.label31.Location = new System.Drawing.Point(350, 40);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(15, 15);
+            this.label31.TabIndex = 5;
+            this.label31.Text = "*";
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Location = new System.Drawing.Point(205, 143);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(63, 34);
+            this.BtnSearch.TabIndex = 4;
+            this.BtnSearch.Text = "查询";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // cb_Type
+            // 
+            this.cb_Type.FormattingEnabled = true;
+            this.cb_Type.Items.AddRange(new object[] {
+            "---请选择---",
+            "公共选修课",
+            "挂牌选课"});
+            this.cb_Type.Location = new System.Drawing.Point(167, 86);
+            this.cb_Type.Name = "cb_Type";
+            this.cb_Type.Size = new System.Drawing.Size(177, 23);
+            this.cb_Type.TabIndex = 3;
+            // 
+            // cb_TermYear
+            // 
+            this.cb_TermYear.FormattingEnabled = true;
+            this.cb_TermYear.Items.AddRange(new object[] {
+            "2020-2021-1"});
+            this.cb_TermYear.Location = new System.Drawing.Point(167, 36);
+            this.cb_TermYear.Name = "cb_TermYear";
+            this.cb_TermYear.Size = new System.Drawing.Size(177, 23);
+            this.cb_TermYear.TabIndex = 2;
+            this.cb_TermYear.SelectedIndexChanged += new System.EventHandler(this.cb_TermYear_SelectedIndexChanged);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label30.Location = new System.Drawing.Point(86, 89);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(87, 15);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "选课类别：";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label29.Location = new System.Drawing.Point(86, 40);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(87, 15);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "学年学期：";
+            // 
+            // ShowPublicCourse
+            // 
+            this.ShowPublicCourse.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ShowPublicCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ShowPublicCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CourseNo,
+            this.Column61,
+            this.Column62,
+            this.Column63,
+            this.Column64,
+            this.Column65,
+            this.Status});
+            this.ShowPublicCourse.Location = new System.Drawing.Point(39, 24);
+            this.ShowPublicCourse.Name = "ShowPublicCourse";
+            this.ShowPublicCourse.RowTemplate.Height = 27;
+            this.ShowPublicCourse.Size = new System.Drawing.Size(967, 322);
+            this.ShowPublicCourse.TabIndex = 7;
             // 
             // dgv_TrainProgram
             // 
@@ -1617,7 +1709,7 @@
             this.dgv_TrainProgram.Location = new System.Drawing.Point(219, 64);
             this.dgv_TrainProgram.Name = "dgv_TrainProgram";
             this.dgv_TrainProgram.RowTemplate.Height = 27;
-            this.dgv_TrainProgram.Size = new System.Drawing.Size(999, 613);
+            this.dgv_TrainProgram.Size = new System.Drawing.Size(1101, 613);
             this.dgv_TrainProgram.TabIndex = 5;
             this.dgv_TrainProgram.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -1636,211 +1728,6 @@
             // 
             this.Column7.HeaderText = "操作";
             this.Column7.Name = "Column7";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column43,
-            this.Column44,
-            this.Column45,
-            this.Column46,
-            this.Column47,
-            this.Column48,
-            this.Column49});
-            this.dataGridView2.Location = new System.Drawing.Point(314, 428);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 27;
-            this.dataGridView2.Size = new System.Drawing.Size(879, 27);
-            this.dataGridView2.TabIndex = 18;
-            // 
-            // Column43
-            // 
-            this.Column43.HeaderText = "序号";
-            this.Column43.Name = "Column43";
-            // 
-            // Column44
-            // 
-            this.Column44.HeaderText = "学年学期";
-            this.Column44.Name = "Column44";
-            // 
-            // Column45
-            // 
-            this.Column45.HeaderText = "选课类别";
-            this.Column45.Name = "Column45";
-            // 
-            // Column46
-            // 
-            this.Column46.HeaderText = "选课阶段";
-            this.Column46.Name = "Column46";
-            // 
-            // Column47
-            // 
-            this.Column47.HeaderText = "选课开始时间";
-            this.Column47.Name = "Column47";
-            this.Column47.Width = 150;
-            // 
-            // Column48
-            // 
-            this.Column48.HeaderText = "选课结束时间";
-            this.Column48.Name = "Column48";
-            this.Column48.Width = 150;
-            // 
-            // Column49
-            // 
-            this.Column49.HeaderText = "操作";
-            this.Column49.Name = "Column49";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column37,
-            this.Column38,
-            this.Column39,
-            this.Column40,
-            this.Column41,
-            this.Column42});
-            this.dataGridView1.Location = new System.Drawing.Point(314, 378);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(791, 32);
-            this.dataGridView1.TabIndex = 17;
-            // 
-            // Column37
-            // 
-            this.Column37.HeaderText = "学年学期";
-            this.Column37.Name = "Column37";
-            // 
-            // Column38
-            // 
-            this.Column38.HeaderText = "选课类别";
-            this.Column38.Name = "Column38";
-            // 
-            // Column39
-            // 
-            this.Column39.HeaderText = "选课阶段";
-            this.Column39.Name = "Column39";
-            // 
-            // Column40
-            // 
-            this.Column40.HeaderText = "选课开始时间";
-            this.Column40.Name = "Column40";
-            this.Column40.Width = 150;
-            // 
-            // Column41
-            // 
-            this.Column41.HeaderText = "选课结束时间";
-            this.Column41.Name = "Column41";
-            this.Column41.Width = 150;
-            // 
-            // Column42
-            // 
-            this.Column42.HeaderText = "操作";
-            this.Column42.Name = "Column42";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.label28);
-            this.groupBox8.Controls.Add(this.label27);
-            this.groupBox8.Controls.Add(this.cb_ChooseType);
-            this.groupBox8.Controls.Add(this.cb_SchoolSemester);
-            this.groupBox8.Controls.Add(this.button28);
-            this.groupBox8.Controls.Add(this.label22);
-            this.groupBox8.Controls.Add(this.label21);
-            this.groupBox8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox8.Location = new System.Drawing.Point(314, 171);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(461, 171);
-            this.groupBox8.TabIndex = 6;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "查询选课课程";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(358, 79);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(15, 15);
-            this.label28.TabIndex = 8;
-            this.label28.Text = "*";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(358, 41);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(15, 15);
-            this.label27.TabIndex = 7;
-            this.label27.Text = "*";
-            // 
-            // cb_ChooseType
-            // 
-            this.cb_ChooseType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_ChooseType.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cb_ChooseType.FormattingEnabled = true;
-            this.cb_ChooseType.Items.AddRange(new object[] {
-            "---请选择---",
-            "公共选修课",
-            "挂牌选课"});
-            this.cb_ChooseType.Location = new System.Drawing.Point(132, 75);
-            this.cb_ChooseType.Name = "cb_ChooseType";
-            this.cb_ChooseType.Size = new System.Drawing.Size(220, 26);
-            this.cb_ChooseType.TabIndex = 6;
-            // 
-            // cb_SchoolSemester
-            // 
-            this.cb_SchoolSemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_SchoolSemester.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cb_SchoolSemester.FormattingEnabled = true;
-            this.cb_SchoolSemester.Items.AddRange(new object[] {
-            "---请选择---",
-            "2019-2020-1",
-            "2019-2020-2",
-            "2020-2021-1",
-            "2020-2021-2"});
-            this.cb_SchoolSemester.Location = new System.Drawing.Point(132, 33);
-            this.cb_SchoolSemester.Name = "cb_SchoolSemester";
-            this.cb_SchoolSemester.Size = new System.Drawing.Size(220, 26);
-            this.cb_SchoolSemester.TabIndex = 5;
-            // 
-            // button28
-            // 
-            this.button28.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button28.Location = new System.Drawing.Point(187, 120);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(79, 34);
-            this.button28.TabIndex = 4;
-            this.button28.Text = "查询";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label22.Location = new System.Drawing.Point(51, 79);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(87, 15);
-            this.label22.TabIndex = 1;
-            this.label22.Text = "选课类别：";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.Location = new System.Drawing.Point(51, 39);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(87, 15);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "学年学期：";
             // 
             // label20
             // 
@@ -2115,116 +2002,93 @@
             this.npgsqlCommand1.Transaction = null;
             this.npgsqlCommand1.UnknownResultTypeList = null;
             // 
-            // gb_SearchCourse
+            // groupBox4
             // 
-            this.gb_SearchCourse.Controls.Add(this.label32);
-            this.gb_SearchCourse.Controls.Add(this.label31);
-            this.gb_SearchCourse.Controls.Add(this.BtnSearch);
-            this.gb_SearchCourse.Controls.Add(this.cb_Type);
-            this.gb_SearchCourse.Controls.Add(this.cb_TermYear);
-            this.gb_SearchCourse.Controls.Add(this.label30);
-            this.gb_SearchCourse.Controls.Add(this.label29);
-            this.gb_SearchCourse.Location = new System.Drawing.Point(431, 32);
-            this.gb_SearchCourse.Name = "gb_SearchCourse";
-            this.gb_SearchCourse.Size = new System.Drawing.Size(496, 208);
-            this.gb_SearchCourse.TabIndex = 19;
-            this.gb_SearchCourse.TabStop = false;
-            this.gb_SearchCourse.Text = "查询选课课程";
+            this.groupBox4.Controls.Add(this.btn_Back);
+            this.groupBox4.Controls.Add(this.btn_Choose);
+            this.groupBox4.Controls.Add(this.dgv_HasChoose);
+            this.groupBox4.Controls.Add(this.ShowPublicCourse);
+            this.groupBox4.Location = new System.Drawing.Point(219, 64);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1049, 778);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
             // 
-            // label29
+            // dgv_HasChoose
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.Location = new System.Drawing.Point(86, 40);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(87, 15);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "学年学期：";
+            this.dgv_HasChoose.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_HasChoose.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column38,
+            this.Column39,
+            this.Column40,
+            this.Column41,
+            this.Column42,
+            this.Column43,
+            this.Column44});
+            this.dgv_HasChoose.Location = new System.Drawing.Point(39, 416);
+            this.dgv_HasChoose.Name = "dgv_HasChoose";
+            this.dgv_HasChoose.RowTemplate.Height = 27;
+            this.dgv_HasChoose.Size = new System.Drawing.Size(967, 356);
+            this.dgv_HasChoose.TabIndex = 8;
             // 
-            // label30
+            // btn_Choose
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label30.Location = new System.Drawing.Point(86, 89);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(87, 15);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "选课类别：";
+            this.btn_Choose.Location = new System.Drawing.Point(723, 361);
+            this.btn_Choose.Name = "btn_Choose";
+            this.btn_Choose.Size = new System.Drawing.Size(76, 40);
+            this.btn_Choose.TabIndex = 20;
+            this.btn_Choose.Text = "选课";
+            this.btn_Choose.UseVisualStyleBackColor = true;
+            this.btn_Choose.Click += new System.EventHandler(this.btn_Choose_Click);
             // 
-            // cb_TermYear
+            // btn_Back
             // 
-            this.cb_TermYear.FormattingEnabled = true;
-            this.cb_TermYear.Items.AddRange(new object[] {
-            "2020-2021-1"});
-            this.cb_TermYear.Location = new System.Drawing.Point(167, 36);
-            this.cb_TermYear.Name = "cb_TermYear";
-            this.cb_TermYear.Size = new System.Drawing.Size(177, 23);
-            this.cb_TermYear.TabIndex = 2;
-            this.cb_TermYear.SelectedIndexChanged += new System.EventHandler(this.cb_TermYear_SelectedIndexChanged);
+            this.btn_Back.Location = new System.Drawing.Point(824, 361);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(76, 40);
+            this.btn_Back.TabIndex = 21;
+            this.btn_Back.Text = "退选";
+            this.btn_Back.UseVisualStyleBackColor = true;
             // 
-            // cb_Type
+            // Column38
             // 
-            this.cb_Type.FormattingEnabled = true;
-            this.cb_Type.Items.AddRange(new object[] {
-            "---请选择---",
-            "公共选修课",
-            "挂牌选课"});
-            this.cb_Type.Location = new System.Drawing.Point(167, 86);
-            this.cb_Type.Name = "cb_Type";
-            this.cb_Type.Size = new System.Drawing.Size(177, 23);
-            this.cb_Type.TabIndex = 3;
+            this.Column38.HeaderText = "课程号";
+            this.Column38.Name = "Column38";
             // 
-            // BtnSearch
+            // Column39
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(205, 143);
-            this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(63, 34);
-            this.BtnSearch.TabIndex = 4;
-            this.BtnSearch.Text = "查询";
-            this.BtnSearch.UseVisualStyleBackColor = true;
-            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            this.Column39.HeaderText = "课程名称";
+            this.Column39.Name = "Column39";
             // 
-            // label31
+            // Column40
             // 
-            this.label31.AutoSize = true;
-            this.label31.ForeColor = System.Drawing.Color.Red;
-            this.label31.Location = new System.Drawing.Point(350, 40);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(15, 15);
-            this.label31.TabIndex = 5;
-            this.label31.Text = "*";
+            this.Column40.HeaderText = "学时";
+            this.Column40.Name = "Column40";
             // 
-            // label32
+            // Column41
             // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(350, 89);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(15, 15);
-            this.label32.TabIndex = 6;
-            this.label32.Text = "*";
+            this.Column41.HeaderText = "学分";
+            this.Column41.Name = "Column41";
             // 
-            // ShowPublicCourse
+            // Column42
             // 
-            this.ShowPublicCourse.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ShowPublicCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ShowPublicCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column60,
-            this.Column61,
-            this.Column62,
-            this.Column63,
-            this.Column64,
-            this.Column65});
-            this.ShowPublicCourse.Location = new System.Drawing.Point(219, 64);
-            this.ShowPublicCourse.Name = "ShowPublicCourse";
-            this.ShowPublicCourse.RowTemplate.Height = 27;
-            this.ShowPublicCourse.Size = new System.Drawing.Size(999, 369);
-            this.ShowPublicCourse.TabIndex = 7;
+            this.Column42.HeaderText = "考试类型";
+            this.Column42.Name = "Column42";
             // 
-            // Column60
+            // Column43
             // 
-            this.Column60.HeaderText = "课程号";
-            this.Column60.Name = "Column60";
+            this.Column43.HeaderText = "开始时间";
+            this.Column43.Name = "Column43";
+            // 
+            // Column44
+            // 
+            this.Column44.HeaderText = "状态";
+            this.Column44.Name = "Column44";
+            // 
+            // CourseNo
+            // 
+            this.CourseNo.HeaderText = "课程号";
+            this.CourseNo.Name = "CourseNo";
             // 
             // Column61
             // 
@@ -2250,6 +2114,11 @@
             // 
             this.Column65.HeaderText = "开始时间";
             this.Column65.Name = "Column65";
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "状态";
+            this.Status.Name = "Status";
             // 
             // Center
             // 
@@ -2290,18 +2159,16 @@
             this.gb_StudentManagement.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.gb_SearchCourse.ResumeLayout(false);
+            this.gb_SearchCourse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowPublicCourse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TrainProgram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.gb_TrainProgram.ResumeLayout(false);
-            this.gb_SearchCourse.ResumeLayout(false);
-            this.gb_SearchCourse.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ShowPublicCourse)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HasChoose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2411,10 +2278,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 标题;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DataGridView dgv_infoManagement;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
@@ -2460,25 +2323,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column35;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column36;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column43;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column45;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column47;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column48;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column49;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column42;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.ComboBox cb_ChooseType;
-        private System.Windows.Forms.ComboBox cb_SchoolSemester;
         private System.Windows.Forms.GroupBox gb_GradeMark;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column50;
@@ -2511,11 +2355,23 @@
         private System.Windows.Forms.ComboBox cb_TermYear;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.DataGridView ShowPublicCourse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column60;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btn_Back;
+        private System.Windows.Forms.Button btn_Choose;
+        private System.Windows.Forms.DataGridView dgv_HasChoose;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CourseNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column61;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column62;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column63;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column64;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column65;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
