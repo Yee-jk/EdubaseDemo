@@ -23,7 +23,7 @@ namespace Login
             SqlHelper sqlHelper = new SqlHelper();
             int result = sqlHelper.QuickReturn<int>(Search);
             if (result == 1)
-            {
+            {              
                 Enter enter = new Enter(this.textBox_No.Text);
                 enter.Show();
                 this.Close();

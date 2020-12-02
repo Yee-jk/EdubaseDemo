@@ -53,9 +53,20 @@ CREATE TABLE tb_PublicCourse
 	,StartTime
 		CHAR(11)
 		NOT NULL
+	
 	)
-
-
+IF OBJECT_ID('tb_StudentScore')IS NOT NULL
+	DROP TABLE tb_StudentScore;
+GO
+CREATE TABLE tb_StudentScore
+	(CourseNo
+		CHAR(4)
+	,StudentNo
+		CHAR(10)
+	,Score
+		FLOAT
+	,PRIMARY KEY(CourseNo,StudentNo)
+	)
 
 
 
@@ -268,12 +279,22 @@ INSERT dbo.tb_PublicCourse
     Hour,
     ExamType,
 	StartTime
+	
 )
 VALUES
-	(   'P001',   '跨文化电影解读',   2.0, 32.0,  '论文' ,'2020-2021-1'  ),
+	(   'P001',   '跨文化电影解读',   2.0, 32.0,  '论文' ,'2020-2021-1' ),
 	 (   'P002',   '六级英语阅读写作',   2.0, 32.0,  '笔试','2020-2021-1'    ),
 	 (   'P003',   '葡萄酒的文化与鉴赏',   2.0, 32.0,  '论文' ,'2020-2021-1'   ),
 	 (   'P004',   '面试技巧讲解',   2.0, 32.0,  '论文' ,'2020-2021-1'   ),
 	 (   'P005',   '创业学',   1.5, 24.0,  '论文' ,'2020-2021-1'   ),
-	 (   'P006',   '经络养生',   1.0, 16.0,  '笔试' ,'2020-2021-1'   );
-
+	 (   'P006',   '经络养生',   1.0, 16.0,  '笔试' ,'2020-2021-1'  );
+DELETE FROM tb_StudentScore;
+INSERT dbo.tb_StudentScore
+(
+    CourseNo,
+    StudentNo,
+    Score
+)
+VALUES
+(   'P005',  '3190707045',    90.0     ),
+(   'P002',  '3190707045',    NULL   );

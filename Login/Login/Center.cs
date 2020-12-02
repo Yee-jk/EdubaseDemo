@@ -37,8 +37,9 @@ namespace Login
             dgv_Transaction.Visible = false;
             dgv_ScoreInquiry.Visible = false;
             gb_ScoreInquiry.Visible = false;
-            ShowPublicCourse.Visible = false;
             gb_SearchCourse.Visible = false;
+            gb_GradeMark.Visible = false;
+            groupBox4.Visible = false;
             tb_Show.Text = "增加";
             string Search = @"SELECT
                                 *
@@ -388,6 +389,7 @@ namespace Login
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
+            groupBox4.Visible = true;
             if (cb_Type.SelectedItem==null)
             {
                 MessageBox.Show("选课类别不能为空!");
@@ -436,7 +438,6 @@ namespace Login
                     }
                 }
                 gb_SearchCourse.Visible = false;
-                ShowPublicCourse.Visible = true;
             }            
         }
 
@@ -450,6 +451,11 @@ namespace Login
             }
             SqlHelper sqlHelper = new SqlHelper();
             sqlHelper.QuickSubmit($"INSERT tb_StudentScore(CourseNo,StudentNo)VALUES('{this.ShowPublicCourse.CurrentRow.Cells["CourseNo"].Value.ToString()}', '3190707045');");
+        }
+
+        private void textBox_no_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Center));
             this.tabControl_Center = new System.Windows.Forms.TabControl();
             this.tab_MyDesk = new System.Windows.Forms.TabPage();
             this.gb_ModifyCode = new System.Windows.Forms.GroupBox();
@@ -182,11 +183,25 @@
             this.cb_TermYear = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_Back = new System.Windows.Forms.Button();
+            this.btn_Choose = new System.Windows.Forms.Button();
+            this.dgv_HasChoose = new System.Windows.Forms.DataGridView();
+            this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShowPublicCourse = new System.Windows.Forms.DataGridView();
-            this.dgv_TrainProgram = new System.Windows.Forms.DataGridView();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.标题 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CourseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button27 = new System.Windows.Forms.Button();
@@ -212,27 +227,39 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.dgv_TrainProgram = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.标题 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.npgsqlCommand1 = new Npgsql.NpgsqlCommand();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dgv_HasChoose = new System.Windows.Forms.DataGridView();
-            this.btn_Choose = new System.Windows.Forms.Button();
-            this.btn_Back = new System.Windows.Forms.Button();
-            this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CourseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.tb_No = new System.Windows.Forms.TextBox();
+            this.tb_Name = new System.Windows.Forms.TextBox();
+            this.tb_Academy = new System.Windows.Forms.TextBox();
+            this.tb_Major = new System.Windows.Forms.TextBox();
+            this.tb_Gender = new System.Windows.Forms.TextBox();
+            this.tb_BirthDate = new System.Windows.Forms.TextBox();
             this.tabControl_Center.SuspendLayout();
             this.tab_MyDesk.SuspendLayout();
             this.gb_ModifyCode.SuspendLayout();
@@ -256,18 +283,33 @@
             this.gb_StudentManagement.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.gb_SearchCourse.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HasChoose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShowPublicCourse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_TrainProgram)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.gb_TrainProgram.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_HasChoose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TrainProgram)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_Center
             // 
+            this.tabControl_Center.Controls.Add(this.tabPage1);
             this.tabControl_Center.Controls.Add(this.tab_MyDesk);
             this.tabControl_Center.Controls.Add(this.tabPage2);
             this.tabControl_Center.Controls.Add(this.tabPage3);
@@ -284,13 +326,13 @@
             // 
             this.tab_MyDesk.Controls.Add(this.gb_ModifyCode);
             this.tab_MyDesk.Controls.Add(this.gb_Notice);
-            this.tab_MyDesk.Controls.Add(this.dgv_Notice);
             this.tab_MyDesk.Controls.Add(this.groupBox2);
             this.tab_MyDesk.Controls.Add(this.gb_LeaveMessage);
             this.tab_MyDesk.Controls.Add(this.dgv_LeaveMessage);
             this.tab_MyDesk.Controls.Add(this.groupBox3);
             this.tab_MyDesk.Controls.Add(this.groupBox_Message);
             this.tab_MyDesk.Controls.Add(this.groupBox1);
+            this.tab_MyDesk.Controls.Add(this.dgv_Notice);
             this.tab_MyDesk.Location = new System.Drawing.Point(4, 25);
             this.tab_MyDesk.Name = "tab_MyDesk";
             this.tab_MyDesk.Padding = new System.Windows.Forms.Padding(3);
@@ -514,14 +556,14 @@
             // dgv_Notice
             // 
             this.dgv_Notice.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle50.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Notice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Notice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_Notice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Notice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.序号,
@@ -530,24 +572,24 @@
             this.Column3,
             this.Column4,
             this.操作});
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle52.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Notice.DefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Notice.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_Notice.Location = new System.Drawing.Point(232, 25);
             this.dgv_Notice.Name = "dgv_Notice";
-            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle53.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Notice.RowHeadersDefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Notice.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_Notice.RowTemplate.Height = 27;
             this.dgv_Notice.Size = new System.Drawing.Size(1135, 259);
             this.dgv_Notice.TabIndex = 3;
@@ -557,8 +599,8 @@
             // 
             // 序号
             // 
-            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.序号.DefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.序号.DefaultCellStyle = dataGridViewCellStyle9;
             this.序号.HeaderText = "序号";
             this.序号.Name = "序号";
             this.序号.ReadOnly = true;
@@ -757,7 +799,7 @@
             this.gb_LeaveMessage.Controls.Add(this.textBox2);
             this.gb_LeaveMessage.Controls.Add(this.label3);
             this.gb_LeaveMessage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gb_LeaveMessage.Location = new System.Drawing.Point(855, 532);
+            this.gb_LeaveMessage.Location = new System.Drawing.Point(1079, 174);
             this.gb_LeaveMessage.Name = "gb_LeaveMessage";
             this.gb_LeaveMessage.Size = new System.Drawing.Size(281, 58);
             this.gb_LeaveMessage.TabIndex = 5;
@@ -812,14 +854,14 @@
             // dgv_LeaveMessage
             // 
             this.dgv_LeaveMessage.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle54.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_LeaveMessage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_LeaveMessage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_LeaveMessage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_LeaveMessage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -828,26 +870,26 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.Column59});
-            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle55.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle55.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle55.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_LeaveMessage.DefaultCellStyle = dataGridViewCellStyle55;
-            this.dgv_LeaveMessage.Location = new System.Drawing.Point(234, 337);
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_LeaveMessage.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dgv_LeaveMessage.Location = new System.Drawing.Point(232, 35);
             this.dgv_LeaveMessage.Name = "dgv_LeaveMessage";
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle56.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle56.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle56.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_LeaveMessage.RowHeadersDefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_LeaveMessage.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgv_LeaveMessage.RowTemplate.Height = 27;
-            this.dgv_LeaveMessage.Size = new System.Drawing.Size(1133, 176);
+            this.dgv_LeaveMessage.Size = new System.Drawing.Size(1133, 206);
             this.dgv_LeaveMessage.TabIndex = 4;
             this.dgv_LeaveMessage.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_LeaveMessage_CellClick);
             this.dgv_LeaveMessage.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_LeaveMessage_CellContentClick);
@@ -1680,6 +1722,89 @@
             this.label29.TabIndex = 0;
             this.label29.Text = "学年学期：";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btn_Back);
+            this.groupBox4.Controls.Add(this.btn_Choose);
+            this.groupBox4.Controls.Add(this.dgv_HasChoose);
+            this.groupBox4.Controls.Add(this.ShowPublicCourse);
+            this.groupBox4.Location = new System.Drawing.Point(219, 64);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1049, 778);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(824, 361);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(76, 40);
+            this.btn_Back.TabIndex = 21;
+            this.btn_Back.Text = "退选";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            // 
+            // btn_Choose
+            // 
+            this.btn_Choose.Location = new System.Drawing.Point(723, 361);
+            this.btn_Choose.Name = "btn_Choose";
+            this.btn_Choose.Size = new System.Drawing.Size(76, 40);
+            this.btn_Choose.TabIndex = 20;
+            this.btn_Choose.Text = "选课";
+            this.btn_Choose.UseVisualStyleBackColor = true;
+            this.btn_Choose.Click += new System.EventHandler(this.btn_Choose_Click);
+            // 
+            // dgv_HasChoose
+            // 
+            this.dgv_HasChoose.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_HasChoose.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column38,
+            this.Column39,
+            this.Column40,
+            this.Column41,
+            this.Column42,
+            this.Column43,
+            this.Column44});
+            this.dgv_HasChoose.Location = new System.Drawing.Point(39, 416);
+            this.dgv_HasChoose.Name = "dgv_HasChoose";
+            this.dgv_HasChoose.RowTemplate.Height = 27;
+            this.dgv_HasChoose.Size = new System.Drawing.Size(967, 356);
+            this.dgv_HasChoose.TabIndex = 8;
+            // 
+            // Column38
+            // 
+            this.Column38.HeaderText = "课程号";
+            this.Column38.Name = "Column38";
+            // 
+            // Column39
+            // 
+            this.Column39.HeaderText = "课程名称";
+            this.Column39.Name = "Column39";
+            // 
+            // Column40
+            // 
+            this.Column40.HeaderText = "学时";
+            this.Column40.Name = "Column40";
+            // 
+            // Column41
+            // 
+            this.Column41.HeaderText = "学分";
+            this.Column41.Name = "Column41";
+            // 
+            // Column42
+            // 
+            this.Column42.HeaderText = "考试类型";
+            this.Column42.Name = "Column42";
+            // 
+            // Column43
+            // 
+            this.Column43.HeaderText = "开始时间";
+            this.Column43.Name = "Column43";
+            // 
+            // Column44
+            // 
+            this.Column44.HeaderText = "状态";
+            this.Column44.Name = "Column44";
+            // 
             // ShowPublicCourse
             // 
             this.ShowPublicCourse.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -1698,36 +1823,40 @@
             this.ShowPublicCourse.Size = new System.Drawing.Size(967, 322);
             this.ShowPublicCourse.TabIndex = 7;
             // 
-            // dgv_TrainProgram
+            // CourseNo
             // 
-            this.dgv_TrainProgram.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgv_TrainProgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_TrainProgram.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column5,
-            this.标题,
-            this.Column7});
-            this.dgv_TrainProgram.Location = new System.Drawing.Point(219, 64);
-            this.dgv_TrainProgram.Name = "dgv_TrainProgram";
-            this.dgv_TrainProgram.RowTemplate.Height = 27;
-            this.dgv_TrainProgram.Size = new System.Drawing.Size(1101, 613);
-            this.dgv_TrainProgram.TabIndex = 5;
-            this.dgv_TrainProgram.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.CourseNo.HeaderText = "课程号";
+            this.CourseNo.Name = "CourseNo";
             // 
-            // Column5
+            // Column61
             // 
-            this.Column5.HeaderText = "序号";
-            this.Column5.Name = "Column5";
+            this.Column61.HeaderText = "课程名称";
+            this.Column61.Name = "Column61";
             // 
-            // 标题
+            // Column62
             // 
-            this.标题.HeaderText = "标题";
-            this.标题.Name = "标题";
-            this.标题.Width = 500;
+            this.Column62.HeaderText = "学分";
+            this.Column62.Name = "Column62";
             // 
-            // Column7
+            // Column63
             // 
-            this.Column7.HeaderText = "操作";
-            this.Column7.Name = "Column7";
+            this.Column63.HeaderText = "学时";
+            this.Column63.Name = "Column63";
+            // 
+            // Column64
+            // 
+            this.Column64.HeaderText = "考核类型";
+            this.Column64.Name = "Column64";
+            // 
+            // Column65
+            // 
+            this.Column65.HeaderText = "开始时间";
+            this.Column65.Name = "Column65";
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "状态";
+            this.Status.Name = "Status";
             // 
             // label20
             // 
@@ -1976,6 +2105,37 @@
             this.button8.Text = "指导培养方案";
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // dgv_TrainProgram
+            // 
+            this.dgv_TrainProgram.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv_TrainProgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TrainProgram.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.标题,
+            this.Column7});
+            this.dgv_TrainProgram.Location = new System.Drawing.Point(219, 64);
+            this.dgv_TrainProgram.Name = "dgv_TrainProgram";
+            this.dgv_TrainProgram.RowTemplate.Height = 27;
+            this.dgv_TrainProgram.Size = new System.Drawing.Size(1101, 613);
+            this.dgv_TrainProgram.TabIndex = 5;
+            this.dgv_TrainProgram.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "序号";
+            this.Column5.Name = "Column5";
+            // 
+            // 标题
+            // 
+            this.标题.HeaderText = "标题";
+            this.标题.Name = "标题";
+            this.标题.Width = 500;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "操作";
+            this.Column7.Name = "Column7";
+            // 
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
@@ -2002,123 +2162,284 @@
             this.npgsqlCommand1.Transaction = null;
             this.npgsqlCommand1.UnknownResultTypeList = null;
             // 
-            // groupBox4
+            // tabPage1
             // 
-            this.groupBox4.Controls.Add(this.btn_Back);
-            this.groupBox4.Controls.Add(this.btn_Choose);
-            this.groupBox4.Controls.Add(this.dgv_HasChoose);
-            this.groupBox4.Controls.Add(this.ShowPublicCourse);
-            this.groupBox4.Location = new System.Drawing.Point(219, 64);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1049, 778);
-            this.groupBox4.TabIndex = 7;
-            this.groupBox4.TabStop = false;
+            this.tabPage1.Controls.Add(this.pictureBox12);
+            this.tabPage1.Controls.Add(this.pictureBox11);
+            this.tabPage1.Controls.Add(this.pictureBox10);
+            this.tabPage1.Controls.Add(this.pictureBox9);
+            this.tabPage1.Controls.Add(this.pictureBox8);
+            this.tabPage1.Controls.Add(this.pictureBox7);
+            this.tabPage1.Controls.Add(this.pictureBox6);
+            this.tabPage1.Controls.Add(this.pictureBox5);
+            this.tabPage1.Controls.Add(this.pictureBox4);
+            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.pictureBox2);
+            this.tabPage1.Controls.Add(this.groupBox8);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1373, 895);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "首页";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dgv_HasChoose
+            // pictureBox1
             // 
-            this.dgv_HasChoose.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HasChoose.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column38,
-            this.Column39,
-            this.Column40,
-            this.Column41,
-            this.Column42,
-            this.Column43,
-            this.Column44});
-            this.dgv_HasChoose.Location = new System.Drawing.Point(39, 416);
-            this.dgv_HasChoose.Name = "dgv_HasChoose";
-            this.dgv_HasChoose.RowTemplate.Height = 27;
-            this.dgv_HasChoose.Size = new System.Drawing.Size(967, 356);
-            this.dgv_HasChoose.TabIndex = 8;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(376, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(620, 96);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // btn_Choose
+            // groupBox8
             // 
-            this.btn_Choose.Location = new System.Drawing.Point(723, 361);
-            this.btn_Choose.Name = "btn_Choose";
-            this.btn_Choose.Size = new System.Drawing.Size(76, 40);
-            this.btn_Choose.TabIndex = 20;
-            this.btn_Choose.Text = "选课";
-            this.btn_Choose.UseVisualStyleBackColor = true;
-            this.btn_Choose.Click += new System.EventHandler(this.btn_Choose_Click);
+            this.groupBox8.Controls.Add(this.tb_BirthDate);
+            this.groupBox8.Controls.Add(this.tb_Gender);
+            this.groupBox8.Controls.Add(this.tb_Major);
+            this.groupBox8.Controls.Add(this.tb_Academy);
+            this.groupBox8.Controls.Add(this.tb_Name);
+            this.groupBox8.Controls.Add(this.tb_No);
+            this.groupBox8.Controls.Add(this.label34);
+            this.groupBox8.Controls.Add(this.label33);
+            this.groupBox8.Controls.Add(this.label28);
+            this.groupBox8.Controls.Add(this.label27);
+            this.groupBox8.Controls.Add(this.label22);
+            this.groupBox8.Controls.Add(this.label21);
+            this.groupBox8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox8.Location = new System.Drawing.Point(149, 102);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(341, 369);
+            this.groupBox8.TabIndex = 1;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "个人信息";
             // 
-            // btn_Back
+            // pictureBox2
             // 
-            this.btn_Back.Location = new System.Drawing.Point(824, 361);
-            this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(76, 40);
-            this.btn_Back.TabIndex = 21;
-            this.btn_Back.Text = "退选";
-            this.btn_Back.UseVisualStyleBackColor = true;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(153, 472);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(164, 168);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
-            // Column38
+            // pictureBox3
             // 
-            this.Column38.HeaderText = "课程号";
-            this.Column38.Name = "Column38";
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(320, 472);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(163, 171);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
-            // Column39
+            // pictureBox4
             // 
-            this.Column39.HeaderText = "课程名称";
-            this.Column39.Name = "Column39";
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(489, 472);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(192, 168);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
             // 
-            // Column40
+            // pictureBox5
             // 
-            this.Column40.HeaderText = "学时";
-            this.Column40.Name = "Column40";
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(489, 111);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(191, 360);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
             // 
-            // Column41
+            // pictureBox6
             // 
-            this.Column41.HeaderText = "学分";
-            this.Column41.Name = "Column41";
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(685, 116);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(216, 175);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
             // 
-            // Column42
+            // pictureBox7
             // 
-            this.Column42.HeaderText = "考试类型";
-            this.Column42.Name = "Column42";
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(683, 293);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(217, 175);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
             // 
-            // Column43
+            // pictureBox8
             // 
-            this.Column43.HeaderText = "开始时间";
-            this.Column43.Name = "Column43";
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(685, 469);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(217, 172);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
             // 
-            // Column44
+            // pictureBox9
             // 
-            this.Column44.HeaderText = "状态";
-            this.Column44.Name = "Column44";
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(905, 115);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(381, 175);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 9;
+            this.pictureBox9.TabStop = false;
             // 
-            // CourseNo
+            // pictureBox10
             // 
-            this.CourseNo.HeaderText = "课程号";
-            this.CourseNo.Name = "CourseNo";
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(901, 292);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(380, 176);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 10;
+            this.pictureBox10.TabStop = false;
             // 
-            // Column61
+            // pictureBox11
             // 
-            this.Column61.HeaderText = "课程名称";
-            this.Column61.Name = "Column61";
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(906, 466);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(186, 173);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 11;
+            this.pictureBox11.TabStop = false;
             // 
-            // Column62
+            // pictureBox12
             // 
-            this.Column62.HeaderText = "学分";
-            this.Column62.Name = "Column62";
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(1095, 467);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(187, 173);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 12;
+            this.pictureBox12.TabStop = false;
             // 
-            // Column63
+            // label21
             // 
-            this.Column63.HeaderText = "学时";
-            this.Column63.Name = "Column63";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 46);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(69, 20);
+            this.label21.TabIndex = 13;
+            this.label21.Text = "学号：";
             // 
-            // Column64
+            // label22
             // 
-            this.Column64.HeaderText = "考核类型";
-            this.Column64.Name = "Column64";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 101);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(69, 20);
+            this.label22.TabIndex = 14;
+            this.label22.Text = "姓名：";
             // 
-            // Column65
+            // label27
             // 
-            this.Column65.HeaderText = "开始时间";
-            this.Column65.Name = "Column65";
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 155);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(69, 20);
+            this.label27.TabIndex = 15;
+            this.label27.Text = "学院：";
             // 
-            // Status
+            // label28
             // 
-            this.Status.HeaderText = "状态";
-            this.Status.Name = "Status";
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 209);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(69, 20);
+            this.label28.TabIndex = 16;
+            this.label28.Text = "专业：";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(6, 260);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(69, 20);
+            this.label33.TabIndex = 17;
+            this.label33.Text = "性别：";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(6, 306);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(109, 20);
+            this.label34.TabIndex = 18;
+            this.label34.Text = "出生日期：";
+            // 
+            // tb_No
+            // 
+            this.tb_No.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tb_No.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_No.Location = new System.Drawing.Point(68, 41);
+            this.tb_No.Name = "tb_No";
+            this.tb_No.ReadOnly = true;
+            this.tb_No.Size = new System.Drawing.Size(251, 23);
+            this.tb_No.TabIndex = 19;
+            // 
+            // tb_Name
+            // 
+            this.tb_Name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Name.Location = new System.Drawing.Point(68, 97);
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.ReadOnly = true;
+            this.tb_Name.Size = new System.Drawing.Size(251, 23);
+            this.tb_Name.TabIndex = 20;
+            // 
+            // tb_Academy
+            // 
+            this.tb_Academy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tb_Academy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Academy.Location = new System.Drawing.Point(68, 150);
+            this.tb_Academy.Name = "tb_Academy";
+            this.tb_Academy.ReadOnly = true;
+            this.tb_Academy.Size = new System.Drawing.Size(251, 23);
+            this.tb_Academy.TabIndex = 21;
+            // 
+            // tb_Major
+            // 
+            this.tb_Major.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tb_Major.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Major.Location = new System.Drawing.Point(68, 204);
+            this.tb_Major.Name = "tb_Major";
+            this.tb_Major.ReadOnly = true;
+            this.tb_Major.Size = new System.Drawing.Size(251, 23);
+            this.tb_Major.TabIndex = 22;
+            // 
+            // tb_Gender
+            // 
+            this.tb_Gender.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tb_Gender.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Gender.Location = new System.Drawing.Point(68, 255);
+            this.tb_Gender.Name = "tb_Gender";
+            this.tb_Gender.ReadOnly = true;
+            this.tb_Gender.Size = new System.Drawing.Size(251, 23);
+            this.tb_Gender.TabIndex = 23;
+            // 
+            // tb_BirthDate
+            // 
+            this.tb_BirthDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tb_BirthDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_BirthDate.Location = new System.Drawing.Point(100, 303);
+            this.tb_BirthDate.Name = "tb_BirthDate";
+            this.tb_BirthDate.ReadOnly = true;
+            this.tb_BirthDate.Size = new System.Drawing.Size(219, 23);
+            this.tb_BirthDate.TabIndex = 24;
             // 
             // Center
             // 
@@ -2161,14 +2482,29 @@
             this.tabPage3.PerformLayout();
             this.gb_SearchCourse.ResumeLayout(false);
             this.gb_SearchCourse.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HasChoose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShowPublicCourse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_TrainProgram)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.gb_TrainProgram.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_HasChoose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TrainProgram)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2373,5 +2709,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column64;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column65;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox tb_BirthDate;
+        private System.Windows.Forms.TextBox tb_Gender;
+        private System.Windows.Forms.TextBox tb_Major;
+        private System.Windows.Forms.TextBox tb_Academy;
+        private System.Windows.Forms.TextBox tb_Name;
+        private System.Windows.Forms.TextBox tb_No;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
     }
 }

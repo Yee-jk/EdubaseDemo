@@ -41,8 +41,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_Gender = new System.Windows.Forms.TextBox();
             this.textBox_BirhDate = new System.Windows.Forms.TextBox();
-            this.btn_Notice = new System.Windows.Forms.Button();
-            this.btn_leavemessage = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Center = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -208,33 +206,6 @@
             this.textBox_BirhDate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_BirhDate.Size = new System.Drawing.Size(128, 21);
             this.textBox_BirhDate.TabIndex = 12;
-            // 
-            // btn_Notice
-            // 
-            this.btn_Notice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_Notice.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_Notice.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_Notice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Notice.Location = new System.Drawing.Point(1172, 25);
-            this.btn_Notice.Name = "btn_Notice";
-            this.btn_Notice.Size = new System.Drawing.Size(161, 172);
-            this.btn_Notice.TabIndex = 13;
-            this.btn_Notice.Text = "已收公告";
-            this.btn_Notice.UseVisualStyleBackColor = false;
-            this.btn_Notice.Click += new System.EventHandler(this.btn_Notice_Click);
-            // 
-            // btn_leavemessage
-            // 
-            this.btn_leavemessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_leavemessage.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_leavemessage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_leavemessage.Location = new System.Drawing.Point(1172, 168);
-            this.btn_leavemessage.Name = "btn_leavemessage";
-            this.btn_leavemessage.Size = new System.Drawing.Size(161, 173);
-            this.btn_leavemessage.TabIndex = 14;
-            this.btn_leavemessage.Text = "已收留言";
-            this.btn_leavemessage.UseVisualStyleBackColor = false;
-            this.btn_leavemessage.Click += new System.EventHandler(this.btn_leavemessage_Click);
             // 
             // groupBox1
             // 
@@ -413,8 +384,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_Center);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_leavemessage);
-            this.Controls.Add(this.btn_Notice);
             this.Name = "Enter";
             this.Text = "学生个人中心";
             this.Load += new System.EventHandler(this.Enter_Load);
@@ -449,8 +418,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox_Gender;
         private System.Windows.Forms.TextBox textBox_BirhDate;
-        private System.Windows.Forms.Button btn_Notice;
-        private System.Windows.Forms.Button btn_leavemessage;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Center;
         private System.Windows.Forms.PictureBox pictureBox1;
