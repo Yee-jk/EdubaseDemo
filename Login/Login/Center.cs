@@ -74,6 +74,7 @@ namespace Login
 
         private void Btn_Notice_Click(object sender, EventArgs e)
         {
+            dgv_Notice.Rows.Clear();
             dgv_LeaveMessage.Visible = false;
             dgv_Notice.Visible = true;
             gb_LeaveMessage.Visible = false;
@@ -100,6 +101,7 @@ namespace Login
 
         private void Btn_Leavemessage_Click(object sender, EventArgs e)
         {
+            dgv_LeaveMessage.Rows.Clear();
             dgv_Notice.Visible = false;
             dgv_LeaveMessage.Visible = true;
             gb_Notice.Visible = false;
@@ -406,6 +408,47 @@ namespace Login
             gb_SearchCourse.Visible = true;
         }
 
+        private void LoadCourse()
+        {
+            string Search = $@"
+                                SELECT  PC.* ,
+	                                IIF(SS.CourseNo IS NULL,'未选修','已选修') AS Status
+                                FROM
+	                                dbo.tb_PublicCourse AS PC
+	                                LEFT JOIN tb_StudentScore AS SS ON SS.CourseNo=PC.No;";
+            SqlHelper sqlHelper = new SqlHelper();
+            sqlHelper.QuickRead(Search);
+            while (sqlHelper.HasRecord)
+            {
+                int index = this.ShowPublicCourse.Rows.Add();
+                ShowPublicCourse.Rows[index].Cells[0].Value = sqlHelper["No"].ToString();
+                ShowPublicCourse.Rows[index].Cells[1].Value = sqlHelper["Name"].ToString();
+                ShowPublicCourse.Rows[index].Cells[2].Value = sqlHelper["Credit"].ToString();
+                ShowPublicCourse.Rows[index].Cells[3].Value = sqlHelper["Hour"].ToString();
+                ShowPublicCourse.Rows[index].Cells[4].Value = sqlHelper["ExamType"].ToString();
+                ShowPublicCourse.Rows[index].Cells[5].Value = sqlHelper["StartTime"].ToString();
+                ShowPublicCourse.Rows[index].Cells[6].Value = sqlHelper["Status"].ToString();
+            }
+            string Search2 = $@"
+                                SELECT PC.* ,
+	                                IIF(SS.Score IS NULL,'可退选','不可退选') AS Status
+                                FROM
+	                                dbo.tb_PublicCourse AS PC
+	                                JOIN tb_StudentScore AS SS ON SS.CourseNo=PC.No;";
+            SqlHelper sqlHelper2 = new SqlHelper();
+            sqlHelper2.QuickRead(Search2);
+            while (sqlHelper2.HasRecord)
+            {
+                int index2 = this.dgv_HasChoose.Rows.Add();
+                dgv_HasChoose.Rows[index2].Cells[0].Value = sqlHelper2["No"].ToString();
+                dgv_HasChoose.Rows[index2].Cells[1].Value = sqlHelper2["Name"].ToString();
+                dgv_HasChoose.Rows[index2].Cells[2].Value = sqlHelper2["Credit"].ToString();
+                dgv_HasChoose.Rows[index2].Cells[3].Value = sqlHelper2["Hour"].ToString();
+                dgv_HasChoose.Rows[index2].Cells[4].Value = sqlHelper2["ExamType"].ToString();
+                dgv_HasChoose.Rows[index2].Cells[5].Value = sqlHelper2["StartTime"].ToString();
+                dgv_HasChoose.Rows[index2].Cells[6].Value = sqlHelper2["Status"].ToString();
+            }
+        }
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             groupBox4.Visible = true;
@@ -417,44 +460,7 @@ namespace Login
             {
                 if (cb_TermYear.SelectedItem.ToString() == "2020-2021-1")
                 {
-                    string Search = $@"
-                                SELECT  PC.* ,
-	                                IIF(SS.CourseNo IS NULL,'未选修','已选修') AS Status
-                                FROM
-	                                dbo.tb_PublicCourse AS PC
-	                                LEFT JOIN tb_StudentScore AS SS ON SS.CourseNo=PC.No;";
-                    SqlHelper sqlHelper = new SqlHelper();
-                    sqlHelper.QuickRead(Search);
-                    while (sqlHelper.HasRecord)
-                    {
-                        int index = this.ShowPublicCourse.Rows.Add();
-                        ShowPublicCourse.Rows[index].Cells[0].Value = sqlHelper["No"].ToString();
-                        ShowPublicCourse.Rows[index].Cells[1].Value = sqlHelper["Name"].ToString();
-                        ShowPublicCourse.Rows[index].Cells[2].Value = sqlHelper["Credit"].ToString();
-                        ShowPublicCourse.Rows[index].Cells[3].Value = sqlHelper["Hour"].ToString();
-                        ShowPublicCourse.Rows[index].Cells[4].Value = sqlHelper["ExamType"].ToString();
-                        ShowPublicCourse.Rows[index].Cells[5].Value = sqlHelper["StartTime"].ToString();
-                        ShowPublicCourse.Rows[index].Cells[6].Value = sqlHelper["Status"].ToString();
-                    }
-                    string Search2 = $@"
-                                SELECT PC.* ,
-	                                IIF(SS.Score IS NULL,'可退选','不可退选') AS Status
-                                FROM
-	                                dbo.tb_PublicCourse AS PC
-	                                JOIN tb_StudentScore AS SS ON SS.CourseNo=PC.No;";
-                    SqlHelper sqlHelper2 = new SqlHelper();
-                    sqlHelper2.QuickRead(Search2);
-                    while (sqlHelper2.HasRecord)
-                    {
-                        int index2 = this.dgv_HasChoose.Rows.Add();
-                        dgv_HasChoose.Rows[index2].Cells[0].Value = sqlHelper2["No"].ToString();
-                        dgv_HasChoose.Rows[index2].Cells[1].Value = sqlHelper2["Name"].ToString();
-                        dgv_HasChoose.Rows[index2].Cells[2].Value = sqlHelper2["Credit"].ToString();
-                        dgv_HasChoose.Rows[index2].Cells[3].Value = sqlHelper2["Hour"].ToString();
-                        dgv_HasChoose.Rows[index2].Cells[4].Value = sqlHelper2["ExamType"].ToString();
-                        dgv_HasChoose.Rows[index2].Cells[5].Value = sqlHelper2["StartTime"].ToString();
-                        dgv_HasChoose.Rows[index2].Cells[6].Value = sqlHelper2["Status"].ToString();
-                    }
+                    this.LoadCourse();
                 }
                 gb_SearchCourse.Visible = false;
             }            
@@ -470,11 +476,30 @@ namespace Login
             }
             SqlHelper sqlHelper = new SqlHelper();
             sqlHelper.QuickSubmit($"INSERT tb_StudentScore(CourseNo,StudentNo)VALUES('{this.ShowPublicCourse.CurrentRow.Cells["CourseNo"].Value.ToString()}', '3190707045');");
+            ShowPublicCourse.Rows.Clear();
+            dgv_HasChoose.Rows.Clear();
+            this.LoadCourse();
         }
 
         private void textBox_no_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            string status = this.dgv_HasChoose.CurrentRow.Cells["Course_Status"].Value.ToString();
+            if (status == "不可退")
+            {
+                MessageBox.Show("该课已有成绩！不可退选！");
+                return;
+            }
+            SqlHelper sqlHelper = new SqlHelper();
+            String Current_course_no = this.dgv_HasChoose.CurrentRow.Cells["course_no"].Value.ToString();
+            sqlHelper.QuickSubmit($"DELETE tb_StudentScore WHERE StudentNo='3190707045' AND CourseNo='{Current_course_no}';");
+            ShowPublicCourse.Rows.Clear();
+            dgv_HasChoose.Rows.Clear();
+            this.LoadCourse();
         }
     }
     }

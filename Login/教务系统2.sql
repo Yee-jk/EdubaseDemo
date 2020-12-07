@@ -92,7 +92,28 @@ CREATE TABLE tb_StudentScore
 		FLOAT
 	,PRIMARY KEY(CourseNo,StudentNo)
 	)
-
+IF OBJECT_ID('tb_SocialExam')IS NOT NULL
+	DROP TABLE tb_SocialExam;
+GO
+CREATE TABLE tb_SocialExam
+	(NO
+		CHAR(9)
+		CONSTRAINT pk_Social_Exam
+		PRIMARY KEY(NO)
+		NOT NULL
+	,ExamName
+		VARCHAR(40)
+		NOT NULL
+	,ExamDate
+		DATE
+		NOT NULL
+	,Level
+		VARCHAR(10)
+		NOT NULL
+	,Type
+		VARCHAR(20)
+		NOT NULL
+	);
 
 
 
@@ -324,3 +345,16 @@ INSERT dbo.tb_StudentScore
 VALUES
 (   'P005',  '3190707045',    90.0     ),
 (   'P002',  '3190707045',    NULL   );
+INSERT dbo.tb_SocialExam
+(
+    NO,
+    ExamName,
+    ExamDate,
+    Level,
+    Type
+)
+VALUES
+	(   'E20190401',  '全国大学英语四六级考试', '2019-11-23',   '四级',   '口试'  ),
+	(   'E20190602',  '全国大学英语四六级考试', '2019-12-14',   '六级',   '笔试'  ),
+	(   'C20190102',  '福建省计算机等级考试',  '2019-12-21',   '二级',   'C语言'  ),
+	(   'C20190202',  '福建省计算机等级考试',  '2019-12-22',   '二级',   'Access'  );
