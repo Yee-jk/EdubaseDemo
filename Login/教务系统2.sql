@@ -29,6 +29,31 @@ CREATE TABLE tb_Notice
 		REFERENCES dbo.tb_Student(No)
 		NOT NULL
 	);
+IF OBJECT_ID('tb_LeaveMessage')IS NOT NULL
+	DROP TABLE tb_LeaveMessage;
+GO
+CREATE TABLE tb_LeaveMessage
+	(No
+		VARCHAR(3)
+		CONSTRAINT pk_LeaveMessage_No
+		PRIMARY KEY(No)
+		NOT NULL
+	,Title
+		VARCHAR(100)
+		NOT NULL
+	,Type
+		VARCHAR(40)
+		NOT NULL
+	,Sender
+		VARCHAR(20)
+		NOT NULL
+	,SendTime
+		DATETIME
+		NOT NULL
+	,Status
+		CHAR(4)
+		NOT NULL
+	);
 IF OBJECT_ID('tb_PublicCourse')IS NOT NULL
 	DROP TABLE tb_PublicCourse;
 GO
@@ -178,10 +203,11 @@ INSERT dbo.tb_LeaveMessage
     Title,
     Type,
     Sender,
-    Sendtime
+    Sendtime,
+	Status
 )
 VALUES
-	(   '1',     '福建省计算机等级考试考生须知',      '留言',     '林云燕',   '2015-12-22' );
+	(   '1',     '福建省计算机等级考试考生须知','留言','林云燕',   '2015-12-22','未读');
 DELETE FROM dbo.tb_Notice;
 INSERT dbo.tb_Notice
 (

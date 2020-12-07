@@ -28,6 +28,22 @@ namespace Login
 
         private void Center_Load(object sender, EventArgs e)
         {
+            string Search = $@"SELECT
+		                    *
+	                        FROM dbo.tb_StudentCard
+                            WHERE
+		                   No={Studentid};";
+            SqlHelper sqlHelper = new SqlHelper();
+            sqlHelper.QuickRead(Search);
+            if (sqlHelper.HasRecord)
+            {
+                this.tb_No.Text = sqlHelper["No"].ToString();
+                this.tb_Name.Text = sqlHelper["Name"].ToString();
+                this.tb_Academy.Text = sqlHelper["Academy"].ToString();
+                this.tb_Major.Text = sqlHelper["Major"].ToString();
+                this.tb_Gender.Text = sqlHelper["Gender"].ToString();
+                this.tb_BirthDate.Text = ((DateTime)sqlHelper["BirthDate"]).ToShortDateString();
+            }
             dgv_LeaveMessage.Visible = false;
             gb_LeaveMessage.Visible = false;
             gb_Notice.Visible = false;
@@ -41,18 +57,18 @@ namespace Login
             gb_GradeMark.Visible = false;
             groupBox4.Visible = false;
             tb_Show.Text = "增加";
-            string Search = @"SELECT
+            string Search1 = @"SELECT
                                 *
                             FROM
 	                            tb_TrainProgram	AS TP;";
-            SqlHelper sqlHelper = new SqlHelper();
-            sqlHelper.QuickRead(Search);
-            while (sqlHelper.HasRecord)
+            SqlHelper sqlHelper1 = new SqlHelper();
+            sqlHelper1.QuickRead(Search1);
+            while (sqlHelper1.HasRecord)
             {
                 int index = this.dgv_TrainProgram.Rows.Add();
-                dgv_TrainProgram.Rows[index].Cells[0].Value = sqlHelper["No"].ToString();
-                dgv_TrainProgram.Rows[index].Cells[1].Value = sqlHelper["Title"].ToString();
-                dgv_TrainProgram.Rows[index].Cells[2].Value = sqlHelper["Operation"].ToString();
+                dgv_TrainProgram.Rows[index].Cells[0].Value = sqlHelper1["No"].ToString();
+                dgv_TrainProgram.Rows[index].Cells[1].Value = sqlHelper1["Title"].ToString();
+                dgv_TrainProgram.Rows[index].Cells[2].Value = sqlHelper1["Operation"].ToString();
             }
         }
 
@@ -105,7 +121,8 @@ namespace Login
                 dgv_LeaveMessage.Rows[index4].Cells[1].Value = sqlHelper4["Title"].ToString();
                 dgv_LeaveMessage.Rows[index4].Cells[2].Value = sqlHelper4["Type"].ToString();
                 dgv_LeaveMessage.Rows[index4].Cells[3].Value = sqlHelper4["Sender"].ToString();
-                dgv_LeaveMessage.Rows[index4].Cells[4].Value = sqlHelper4["Sendtime"].ToString();
+                dgv_LeaveMessage.Rows[index4].Cells[4].Value = sqlHelper4["SendTime"].ToString();
+                dgv_LeaveMessage.Rows[index4].Cells[5].Value = sqlHelper4["Status"].ToString();
             }
             }     
         private void gb_Notice_Enter(object sender, EventArgs e)
@@ -192,7 +209,7 @@ namespace Login
 	                        ,S.Code
 	                        FROM dbo.tb_Student AS S
                             WHERE
-		                   No='3190707045';";
+		                   No='{this.Studentid}';";
             SqlHelper sqlHelper = new SqlHelper();
             sqlHelper.QuickRead(Search);
             if (sqlHelper.HasRecord)
@@ -346,10 +363,12 @@ namespace Login
         {
             if (e.ColumnIndex == 5)
             {
+                Detail detail = new Detail();
+                detail.Show();
                 string comandText =
                     $@"UPDATE tb_Notice
                     SET Status='已读'
-                    WHERE StudentNo='3190707045' AND No={e.RowIndex + 1};";
+                    WHERE StudentNo='{this.Studentid}' AND No={e.RowIndex + 1};";
                 SqlHelper sqlHelper = new SqlHelper();
                 int rowAffected = sqlHelper.QuickSubmit(comandText);
                 if (rowAffected == 1)
@@ -362,16 +381,16 @@ namespace Login
         private void dgv_LeaveMessage_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 5)
-            {
+            {              
                 string comandText =
-                    $@"UPDATE tb_Notice
+                    $@"UPDATE tb_LeaveMessage
                     SET Status='已读'
-                    WHERE StudentNo='3190707045' AND No={e.RowIndex + 1};";
+                    WHERE No={e.RowIndex + 1};";
                 SqlHelper sqlHelper = new SqlHelper();
                 int rowAffected = sqlHelper.QuickSubmit(comandText);
                 if (rowAffected == 1)
                 {
-                    this.dgv_Notice.Rows[e.RowIndex].Cells[5].Value = "已读";
+                    this.dgv_LeaveMessage.Rows[e.RowIndex].Cells[5].Value = "已读";
                 }
             }
         }

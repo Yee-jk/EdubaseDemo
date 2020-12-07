@@ -24,8 +24,8 @@ namespace Login
             int result = sqlHelper.QuickReturn<int>(Search);
             if (result == 1)
             {              
-                Enter enter = new Enter(this.textBox_No.Text);
-                enter.Show();
+                Center center = new Center(this.textBox_No.Text);
+                center.Show();
                 this.Close();
             }
             else
