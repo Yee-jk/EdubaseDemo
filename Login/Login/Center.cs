@@ -56,6 +56,7 @@ namespace Login
             gb_SearchCourse.Visible = false;
             gb_GradeMark.Visible = false;
             groupBox4.Visible = false;
+            gb_Confirm.Visible = false;
             tb_Show.Text = "增加";
             string Search1 = @"SELECT
                                 *
@@ -290,6 +291,8 @@ namespace Login
 
         private void btn_ScoreInquiry_Click(object sender, EventArgs e)
         {
+            cb_StartTime.SelectedItem = "---请选择---";
+            cb_CourseNature.SelectedItem= "---请选择---";
             dgv_WarnQuary.Visible = false;
             dgv_Transaction.Visible = false;
             dgv_ScoreInquiry.Visible = false;
@@ -302,24 +305,71 @@ namespace Login
         {
             dgv_ScoreInquiry.Visible = true;
             gb_ScoreInquiry.Visible = false;
-            String Search = $@"SELECT
+            dgv_ScoreInquiry.Rows.Clear();
+            if (tb_CourseName.Text!="")
+            {
+                String Search = $@"SELECT *
+                                   FROM dbo.tb_CourseGrade	  AS CG
+                                  WHERE CG.CourseName='{tb_CourseName.Text}';";
+                SqlHelper sqlHelper = new SqlHelper();
+                sqlHelper.QuickRead(Search);
+                while (sqlHelper.HasRecord)
+                {
+                    int index = this.dgv_ScoreInquiry.Rows.Add();
+                    dgv_ScoreInquiry.Rows[index].Cells[0].Value = sqlHelper["Term"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[1].Value = sqlHelper["CourseNo"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[2].Value = sqlHelper["CourseName"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[3].Value = sqlHelper["Grade"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[4].Value = sqlHelper["Credit"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[5].Value = sqlHelper["TotalHour"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[6].Value = sqlHelper["ExamWay"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[7].Value = sqlHelper["CourseAttribute"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[8].Value = sqlHelper["CourseNature"].ToString();
+                }
+                return;
+            }
+            if (cb_StartTime.SelectedItem.ToString() == "---请选择---"&& cb_CourseNature.SelectedItem.ToString() != "---请选择---")
+            {
+                String Search = $@"SELECT *
+                                   FROM dbo.tb_CourseGrade	  AS CG
+                                  WHERE CG.CourseNature='{cb_CourseNature.SelectedItem}';";
+                SqlHelper sqlHelper = new SqlHelper();
+                sqlHelper.QuickRead(Search);
+                while (sqlHelper.HasRecord)
+                {
+                    int index = this.dgv_ScoreInquiry.Rows.Add();
+                    dgv_ScoreInquiry.Rows[index].Cells[0].Value = sqlHelper["Term"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[1].Value = sqlHelper["CourseNo"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[2].Value = sqlHelper["CourseName"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[3].Value = sqlHelper["Grade"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[4].Value = sqlHelper["Credit"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[5].Value = sqlHelper["TotalHour"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[6].Value = sqlHelper["ExamWay"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[7].Value = sqlHelper["CourseAttribute"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[8].Value = sqlHelper["CourseNature"].ToString();
+                }
+            }
+            if (cb_StartTime.SelectedItem.ToString() == "---请选择---" && cb_CourseNature.SelectedItem.ToString() == "---请选择---")
+            {
+                String Search = $@"SELECT
                                 *
                             FROM
 	                            dbo.tb_CourseGrade;";
-            SqlHelper sqlHelper = new SqlHelper();
-            sqlHelper.QuickRead(Search);
-            while (sqlHelper.HasRecord)
-            {
-                int index = this.dgv_ScoreInquiry.Rows.Add();
-                dgv_ScoreInquiry.Rows[index].Cells[0].Value = sqlHelper["Term"].ToString();
-                dgv_ScoreInquiry.Rows[index].Cells[1].Value = sqlHelper["CourseNo"].ToString();
-                dgv_ScoreInquiry.Rows[index].Cells[2].Value = sqlHelper["CourseName"].ToString();
-                dgv_ScoreInquiry.Rows[index].Cells[3].Value = sqlHelper["Grade"].ToString();
-                dgv_ScoreInquiry.Rows[index].Cells[4].Value = sqlHelper["Credit"].ToString();
-                dgv_ScoreInquiry.Rows[index].Cells[5].Value = sqlHelper["TotalHour"].ToString();
-                dgv_ScoreInquiry.Rows[index].Cells[6].Value = sqlHelper["ExamWay"].ToString();
-                dgv_ScoreInquiry.Rows[index].Cells[7].Value = sqlHelper["CourseAttribute"].ToString();
-                dgv_ScoreInquiry.Rows[index].Cells[8].Value = sqlHelper["CourseNature"].ToString();
+                SqlHelper sqlHelper = new SqlHelper();
+                sqlHelper.QuickRead(Search);
+                while (sqlHelper.HasRecord)
+                {
+                    int index = this.dgv_ScoreInquiry.Rows.Add();
+                    dgv_ScoreInquiry.Rows[index].Cells[0].Value = sqlHelper["Term"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[1].Value = sqlHelper["CourseNo"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[2].Value = sqlHelper["CourseName"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[3].Value = sqlHelper["Grade"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[4].Value = sqlHelper["Credit"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[5].Value = sqlHelper["TotalHour"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[6].Value = sqlHelper["ExamWay"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[7].Value = sqlHelper["CourseAttribute"].ToString();
+                    dgv_ScoreInquiry.Rows[index].Cells[8].Value = sqlHelper["CourseNature"].ToString();
+                }
             }
         }
 
@@ -406,6 +456,8 @@ namespace Login
         {
             dgv_TrainProgram.Visible = false;
             gb_SearchCourse.Visible = true;
+            cb_TermYear.SelectedItem = "2020-2021-1";
+            cb_Type.SelectedItem = "---请选择---";
         }
 
         private void LoadCourse()
@@ -451,13 +503,14 @@ namespace Login
         }
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            groupBox4.Visible = true;
-            if (cb_Type.SelectedItem==null)
+           
+            if (cb_Type.SelectedItem.ToString()=="---请选择---")
             {
                 MessageBox.Show("选课类别不能为空!");
             }
             else
             {
+                groupBox4.Visible = true; 
                 if (cb_TermYear.SelectedItem.ToString() == "2020-2021-1")
                 {
                     this.LoadCourse();
@@ -500,6 +553,82 @@ namespace Login
             ShowPublicCourse.Rows.Clear();
             dgv_HasChoose.Rows.Clear();
             this.LoadCourse();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            dgv_SocialExam.Rows.Clear();
+            string Search = $@"SELECT *
+	                        FROM
+	                        dbo.tb_SocialExam;";
+            SqlHelper sqlHelper = new SqlHelper();
+            sqlHelper.QuickRead(Search);
+            while (sqlHelper.HasRecord)
+            {
+                int index = this.dgv_SocialExam.Rows.Add();
+                dgv_SocialExam.Rows[index].Cells[0].Value = sqlHelper["NO"].ToString();
+                dgv_SocialExam.Rows[index].Cells[1].Value = sqlHelper["ExamName"].ToString();
+                dgv_SocialExam.Rows[index].Cells[2].Value = sqlHelper["ExamDate"].ToString();
+                dgv_SocialExam.Rows[index].Cells[3].Value = sqlHelper["Level"].ToString();
+                dgv_SocialExam.Rows[index].Cells[4].Value = sqlHelper["Type"].ToString();               
+                dgv_SocialExam.Rows[index].Cells[5].Value = sqlHelper["Status"].ToString();
+            }
+        }
+
+        private void dgv_SocialExam_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_SocialExam_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string status = this.dgv_SocialExam.CurrentRow.Cells["NowStatus"].Value.ToString();
+            if (status == "已报名")
+            {
+                MessageBox.Show("您已报名！不可重复报名！");
+                return;
+            }
+            gb_Confirm.Visible = true;
+            string Search = $@"SELECT
+		                    SC.No,SC.Name
+	                        FROM dbo.tb_StudentCard AS SC
+                            WHERE
+		                   No={Studentid};";
+            SqlHelper sqlHelper = new SqlHelper();
+            sqlHelper.QuickRead(Search);
+            if (sqlHelper.HasRecord)
+            {
+                this.tb_StudentNumber.Text = sqlHelper["No"].ToString();
+                this.tb_StudentName.Text = sqlHelper["Name"].ToString();
+            }
+            tb_Exam.Text = this.dgv_SocialExam.CurrentRow.Cells["ExamName"].Value.ToString();
+            tb_ExamNO.Text= this.dgv_SocialExam.CurrentRow.Cells["ExamNo"].Value.ToString();
+        }
+        private void groupBox8_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_apply_Click(object sender, EventArgs e)
+        {
+            gb_Confirm.Visible = false;
+            string comandText =
+                    $@"UPDATE tb_SocialExam
+                    SET Status='已报名'
+                    WHERE NO={tb_ExamNO.Text};";
+            this.dgv_SocialExam.CurrentRow.Cells["NowStatus"].Value = "已报名";
+
+
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            gb_Confirm.Visible = false;
         }
     }
     }
