@@ -521,7 +521,7 @@ namespace Login
 
         private void btn_Choose_Click(object sender, EventArgs e)
         {
-            string status = this.ShowPublicCourse.CurrentRow.Cells["Status"].ToString();
+            string status = this.ShowPublicCourse.CurrentRow.Cells["Status"].Value.ToString();
             if (status == "已选修")
             {
                 MessageBox.Show("该课程已选修！");
@@ -542,9 +542,9 @@ namespace Login
         private void btn_Back_Click(object sender, EventArgs e)
         {
             string status = this.dgv_HasChoose.CurrentRow.Cells["Course_Status"].Value.ToString();
-            if (status == "不可退")
+            if (status == "不可退选")
             {
-                MessageBox.Show("该课已有成绩！不可退选！");
+                MessageBox.Show("该课程已有成绩，不可退选");
                 return;
             }
             SqlHelper sqlHelper = new SqlHelper();
@@ -562,10 +562,21 @@ namespace Login
 
         private void button29_Click(object sender, EventArgs e)
         {
-            dgv_SocialExam.Rows.Clear();
-            string Search = $@"SELECT *
-	                        FROM
-	                        dbo.tb_SocialExam;";
+            this.apply();
+        }
+
+        private void dgv_SocialExam_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void apply()
+        {
+            string Search = $@"
+                                SELECT *,
+		                        IIF(HA.ExamNo IS NULL,'报名','已报名') AS Status
+                                FROM
+	                                dbo.tb_SocialExam AS SE
+	                                LEFT JOIN  tb_HasApply AS HA ON HA.ExamNo=SE.NO";
             SqlHelper sqlHelper = new SqlHelper();
             sqlHelper.QuickRead(Search);
             while (sqlHelper.HasRecord)
@@ -575,16 +586,10 @@ namespace Login
                 dgv_SocialExam.Rows[index].Cells[1].Value = sqlHelper["ExamName"].ToString();
                 dgv_SocialExam.Rows[index].Cells[2].Value = sqlHelper["ExamDate"].ToString();
                 dgv_SocialExam.Rows[index].Cells[3].Value = sqlHelper["Level"].ToString();
-                dgv_SocialExam.Rows[index].Cells[4].Value = sqlHelper["Type"].ToString();               
+                dgv_SocialExam.Rows[index].Cells[4].Value = sqlHelper["Type"].ToString();                
                 dgv_SocialExam.Rows[index].Cells[5].Value = sqlHelper["Status"].ToString();
             }
         }
-
-        private void dgv_SocialExam_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgv_SocialExam_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string status = this.dgv_SocialExam.CurrentRow.Cells["NowStatus"].Value.ToString();
@@ -617,18 +622,21 @@ namespace Login
         private void btn_apply_Click(object sender, EventArgs e)
         {
             gb_Confirm.Visible = false;
-            string comandText =
-                    $@"UPDATE tb_SocialExam
-                    SET Status='已报名'
-                    WHERE NO={tb_ExamNO.Text};";
-            this.dgv_SocialExam.CurrentRow.Cells["NowStatus"].Value = "已报名";
-
+            SqlHelper sqlHelper = new SqlHelper();
+            sqlHelper.QuickSubmit($"INSERT tb_HasApply(ExamNo,StudentNo)VALUES('{this.dgv_SocialExam.CurrentRow.Cells["ExamNo"].Value.ToString()}', '3190707045');");
+            dgv_SocialExam.Rows.Clear();
+            this.apply();
 
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             gb_Confirm.Visible = false;
+        }
+
+        private void dgv_HasChoose_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     }
