@@ -28,6 +28,12 @@ CREATE TABLE tb_Notice
 		FOREIGN KEY(StudentNo)
 		REFERENCES dbo.tb_Student(No)
 		NOT NULL
+	,Detail
+		TEXT
+		NOT NULL
+	,Reply
+		VARCHAR(10)
+		NOT NULL
 	);
 IF OBJECT_ID('tb_LeaveMessage')IS NOT NULL
 	DROP TABLE tb_LeaveMessage;
@@ -54,6 +60,26 @@ CREATE TABLE tb_LeaveMessage
 		CHAR(4)
 		NOT NULL
 	);
+IF OBJECT_ID('tb_Status')IS NOT NULL
+	DROP TABLE tb_Status;
+GO
+CREATE TABLE tb_Status
+	(StudentId
+		CHAR(10)		
+		NOT NULL
+	,NoticeNo
+		VARCHAR(3)
+		NOT NULL
+	,NoticeStatus
+		Char(4)
+		NOT NULL
+	,NTReplyStatus
+		VARCHAR(6)
+		NOT NULL
+	,NTReplyDetail
+		VARCHAR(10)
+		NULL
+	)
 IF OBJECT_ID('tb_PublicCourse')IS NOT NULL
 	DROP TABLE tb_PublicCourse;
 GO
@@ -113,12 +139,59 @@ CREATE TABLE tb_SocialExam
 	,Type
 		VARCHAR(20)
 		NOT NULL
-	,Status
+	);
+IF OBJECT_ID('tb_HasApply')IS NOT NULL
+	DROP TABLE tb_HasApply;
+GO
+CREATE TABLE tb_HasApply
+	(ExamNo
+		CHAR(9)
+	,StudentNo
+		CHAR(10)
+	,PRIMARY KEY(ExamNo,StudentNo)
+	);
+IF OBJECT_ID('tb_ClassRoom')IS NOT NULL
+	DROP TABLE tb_ClassRoom;
+GO
+CREATE TABLE tb_ClassRoom
+	(BuildingName
 		VARCHAR(10)
 		NOT NULL
-	);
-
-
+	,ClassNumber
+		VARCHAR(20)
+		NOT NULL
+	)
+IF OBJECT_ID('tb_ClassBorrow')IS NOT NULL
+	DROP TABLE tb_ClassBorrow;
+GO
+CREATE TABLE tb_ClassBorrow
+	(Term
+		CHAR(11)
+	,BUilding
+		CHAR(6)
+		NOT NULL
+	,Room
+		CHAR(5)
+		NOT NULL
+	,Department
+		VARCHAR(20)
+		NOT NULL
+	,WeekStart
+		CHAR(6)
+		NOT NULL
+	,WeekEnd
+		CHAR(6)		
+	,DayStart
+		CHAR(4)
+		NOT NULL
+	,DayEnd
+		CHAR(4)		
+	,SectionStart
+		CHAR(6)
+		NOT NULL
+	,SectionEnd
+		CHAR(6)			
+	)
 
 
 USE EduSystem2;
@@ -241,12 +314,20 @@ INSERT dbo.tb_Notice
     Sender,
     SendTime,
 	Status,
-	StudentNo
+	StudentNo,
+	Detail,
+	Reply
 )
 VALUES
-	(   '1',    '四六级考试通知',    '公告',     '教务处',   GETDATE(),'未读','3190707045' )
-	,(   '2',    '计算机考试通知',    '公告',     '教务处',   GETDATE(),'未读','3190707045')
-	,(   '3',    '2019-2020-2选课通知',    '公告',     '教务处',   GETDATE(),'未读','3190707045');
+	(   '1',    '四六级考试通知',    '公告',     '教务处',   GETDATE(),'未读','3190707045'
+	,'通知：四六级考试将于明天开始，请参加考试的同学，认真准备三证，了解注意事项，明确考试场地，
+	考试时间等信息，防止出现错误，以便及时更正。','回复')
+	,(   '2',    '计算机考试通知',    '公告',     '教务处',   GETDATE(),'未读','3190707045','关于12月福建省计算机等级考试的通知:
+	1.时间：12月21-22日，详情见文件;2.考场与候考：候考室设在1310教室，考场设在1313机房;
+	3.注意事项：各考生应提前30分钟到达1310候考室集中点名;带齐准考证、学生证、身份证，缺一不可.手机等电子通讯设备需关机并放置于考场入口，贵重物品请考生自行保管好。','回复')
+	,(   '3',    '2019-2020-2选课通知',    '公告',     '教务处',   GETDATE(),'未读','3190707045','关于2019-2020学年第二学期线下选修课有关安排的通知:面向对象:旗山校区2016级，2017级，2018级本科学生;
+	选课方式:网络选课，选课网址: http://210. 34.74.201/f jzyyj sxsd/;请各位同学提前登录系统，进入选课中心点击“查询选课课程”，查看19-20-2课程安排情况。
+	选课时间开放时点击“学生选课中心”选课。','回复');
 DELETE FROM dbo.tb_StudentCard;
 INSERT tb_StudentCard
 ( 
@@ -354,11 +435,72 @@ INSERT dbo.tb_SocialExam
     ExamName,
     ExamDate,
     Level,
-    Type,
-	Status
+    Type
 )
 VALUES
-	(   'E20190401',  '全国大学英语四六级考试', '2019-11-23',   '四级',   '口试','报名'  ),
-	(   'E20190602',  '全国大学英语四六级考试', '2019-12-14',   '六级',   '笔试','报名'   ),
-	(   'C20190102',  '福建省计算机等级考试',  '2019-12-21',   '二级',   'C语言','报名'   ),
-	(   'C20190202',  '福建省计算机等级考试',  '2019-12-22',   '二级',   'Access','报名' );
+	(   'E20190401',  '全国大学英语四六级考试', '2019-11-23',   '四级',   '口试'  ),
+	(   'E20190602',  '全国大学英语四六级考试', '2019-12-14',   '六级',   '笔试'   ),
+	(   'C20190102',  '福建省计算机等级考试',  '2019-12-21',   '二级',   'C语言'  ),
+	(   'C20190202',  '福建省计算机等级考试',  '2019-12-22',   '二级',   'Access' );
+INSERT dbo.tb_HasApply
+(
+    ExamNo,
+    StudentNo
+)
+VALUES
+(   'E20190401', -- ExamNo - char(4)
+    '3190707045'  -- StudentNo - char(10)
+    )
+INSERT dbo.tb_ClassRoom
+(
+    BuildingName,
+    ClassNumber
+)
+VALUES
+	(   '自强楼',  '01103'   ),
+	(   '自强楼',  '01104'   ),
+	(   '自强楼',  '01105'   ),
+	(   '自强楼',  '01106'   ),
+	(   '自强楼',  '01109'   ),
+	(   '自强楼',  '01114'   ),
+	(   '自强楼',  '01115'   ),
+	(   '自强楼',  '01116'   ),
+	(   '厚德楼',  '02101'   ),
+	(   '厚德楼',  '02102'   ),
+	(   '厚德楼',  '02103'   ),
+	(   '厚德楼',  '02104'   ),
+	(   '厚德楼',  '02110'   ),
+	(   '厚德楼',  '02112'   ),
+	(   '五行楼',  '07102'   ),
+	(   '五行楼',  '07106'   ),
+	(   '五行楼',  '07108'   ),
+	(   '五行楼',  '07109'   ),
+	(   '精诚楼',  '04104'   ),
+	(   '精诚楼',  '04106'   ),
+	(   '精诚楼',  '04107'   );
+INSERT 	 dbo.tb_ClassBorrow
+(
+    Term,
+    BUilding,
+    Room,
+    Department,
+    WeekStart,
+    WeekEnd,
+    DayStart,
+    DayEnd,
+    SectionStart,
+    SectionEnd
+)
+VALUES
+	(  '2020-2021-1', '自强楼',   '01101', '人文与管理学院', '第三周',  '第四周',  '周二',  NULL,  '第一节', '第三节' );
+insert tb_Status
+	(StudentId
+	,NoticeNo
+	,NoticeStatus
+	,NTReplyStatus
+	,NTReplyDetail
+	)
+values
+	('3190707045','1','未读','回复',''),
+	('3190707045','2','未读','回复',''),
+	('3190707045','3','未读','回复','');

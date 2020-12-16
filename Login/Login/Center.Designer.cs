@@ -114,6 +114,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_TeachingWeek = new System.Windows.Forms.Button();
             this.groupBox_Message = new System.Windows.Forms.GroupBox();
@@ -123,12 +124,6 @@
             this.Btn_Leavemessage = new System.Windows.Forms.Button();
             this.Btn_Notice = new System.Windows.Forms.Button();
             this.dgv_Notice = new System.Windows.Forms.DataGridView();
-            this.序号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.操作 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gb_GradeMark = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -235,7 +230,7 @@
             this.button24 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.btn_ClassBorrow = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.btn_SearchChooseCourse = new System.Windows.Forms.Button();
@@ -285,6 +280,13 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.NoticeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.操作 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl_Center.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -1097,7 +1099,8 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.Column59});
+            this.Column59,
+            this.Column37});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1156,8 +1159,14 @@
             // 
             // Column59
             // 
-            this.Column59.HeaderText = "操作";
+            this.Column59.HeaderText = "状态";
             this.Column59.Name = "Column59";
+            // 
+            // Column37
+            // 
+            this.Column37.HeaderText = "回复";
+            this.Column37.Name = "Column37";
+            this.Column37.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -1254,12 +1263,13 @@
             this.dgv_Notice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Notice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Notice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.序号,
+            this.NoticeId,
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
-            this.操作});
+            this.操作,
+            this.Column38});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1284,45 +1294,6 @@
             this.dgv_Notice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Notice_CellClick);
             this.dgv_Notice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Notice_CellContentClick);
             this.dgv_Notice.DoubleClick += new System.EventHandler(this.dgv_Notice_DoubleClick);
-            // 
-            // 序号
-            // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.序号.DefaultCellStyle = dataGridViewCellStyle5;
-            this.序号.HeaderText = "序号";
-            this.序号.Name = "序号";
-            this.序号.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "标题";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "类别";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "发送人";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "发送时间";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 200;
-            // 
-            // 操作
-            // 
-            this.操作.HeaderText = "操作";
-            this.操作.Name = "操作";
             // 
             // tabPage2
             // 
@@ -2202,7 +2173,7 @@
             this.groupBox6.Controls.Add(this.button24);
             this.groupBox6.Controls.Add(this.button23);
             this.groupBox6.Controls.Add(this.button22);
-            this.groupBox6.Controls.Add(this.button21);
+            this.groupBox6.Controls.Add(this.btn_ClassBorrow);
             this.groupBox6.Controls.Add(this.button20);
             this.groupBox6.Controls.Add(this.button19);
             this.groupBox6.Controls.Add(this.btn_SearchChooseCourse);
@@ -2240,14 +2211,15 @@
             this.button22.Text = "教学进度表";
             this.button22.UseVisualStyleBackColor = true;
             // 
-            // button21
+            // btn_ClassBorrow
             // 
-            this.button21.Location = new System.Drawing.Point(26, 126);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(135, 28);
-            this.button21.TabIndex = 13;
-            this.button21.Text = "教室借用申请";
-            this.button21.UseVisualStyleBackColor = true;
+            this.btn_ClassBorrow.Location = new System.Drawing.Point(26, 126);
+            this.btn_ClassBorrow.Name = "btn_ClassBorrow";
+            this.btn_ClassBorrow.Size = new System.Drawing.Size(135, 28);
+            this.btn_ClassBorrow.TabIndex = 13;
+            this.btn_ClassBorrow.Text = "教室借用申请";
+            this.btn_ClassBorrow.UseVisualStyleBackColor = true;
+            this.btn_ClassBorrow.Click += new System.EventHandler(this.btn_ClassBorrow_Click);
             // 
             // button20
             // 
@@ -2710,6 +2682,51 @@
             this.tabPage5.Text = "教学评价";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // NoticeId
+            // 
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.NoticeId.DefaultCellStyle = dataGridViewCellStyle5;
+            this.NoticeId.HeaderText = "序号";
+            this.NoticeId.Name = "NoticeId";
+            this.NoticeId.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "标题";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "类别";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "发送人";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "发送时间";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // 操作
+            // 
+            this.操作.HeaderText = "操作";
+            this.操作.Name = "操作";
+            // 
+            // Column38
+            // 
+            this.Column38.HeaderText = "回复";
+            this.Column38.Name = "Column38";
+            this.Column38.ReadOnly = true;
+            // 
             // Center
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -2867,7 +2884,7 @@
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button btn_ClassBorrow;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button btn_SearchChooseCourse;
@@ -2942,18 +2959,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column56;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column57;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column58;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 序号;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 操作;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column59;
         private System.Windows.Forms.GroupBox gb_SearchCourse;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label32;
@@ -3035,5 +3040,19 @@
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.TextBox tb_ExamNO;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column59;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoticeId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 操作;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column38;
     }
 }

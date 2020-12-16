@@ -97,7 +97,8 @@ namespace Login
                 dgv_Notice.Rows[index1].Cells[3].Value = sqlHelper1["Sender"].ToString();
                 dgv_Notice.Rows[index1].Cells[4].Value = sqlHelper1["SendTime"].ToString();
                 dgv_Notice.Rows[index1].Cells[5].Value = sqlHelper1["Status"].ToString();
-            }
+                
+            }            
         }
 
         private void Btn_Leavemessage_Click(object sender, EventArgs e)
@@ -413,10 +414,9 @@ namespace Login
 
         private void dgv_Notice_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            string index = this.dgv_Notice.CurrentRow.Cells["NoticeId"].Value.ToString();
             if (e.ColumnIndex == 5)
-            {
-                Detail detail = new Detail();
-                detail.Show();
+            {                             
                 string comandText =
                     $@"UPDATE tb_Notice
                     SET Status='已读'
@@ -427,6 +427,28 @@ namespace Login
                 {
                     this.dgv_Notice.Rows[e.RowIndex].Cells[5].Value = "已读";
                 }
+                string Search1 = $@"SELECT
+                            *
+                           FROM
+                            dbo.tb_Notice AS N
+                            WHERE StudentNo='{this.Studentid}' AND No={e.RowIndex + 1};";
+                SqlHelper sqlHelper1 = new SqlHelper();
+                sqlHelper1.QuickRead(Search1);
+                string Search2 = $@"SELECT
+                            S.NTReplyDetail
+                           FROM
+                            dbo.tb_Status AS S
+                            WHERE StudentId='{this.Studentid}' AND NoticeNo={e.RowIndex + 1};";
+                SqlHelper sqlHelper2 = new SqlHelper();
+                sqlHelper2.QuickRead(Search2);
+                if (sqlHelper1.HasRecord && sqlHelper2.HasRecord)
+                {
+                    var Text= sqlHelper1["Detail"].ToString();
+                    var Reply = sqlHelper2["NTReplyDetail"].ToString();
+                    Detail detail = new Detail(Text,Reply,index);
+                    detail.Show();
+                }
+                
             }
         }
 
@@ -504,7 +526,7 @@ namespace Login
         private void BtnSearch_Click(object sender, EventArgs e)
         {
            
-            if (cb_Type.SelectedItem.ToString()=="---请选择---")
+            if (cb_Type.SelectedItem.ToString()=="---请选择---") 
             {
                 MessageBox.Show("选课类别不能为空!");
             }
@@ -637,6 +659,12 @@ namespace Login
         private void dgv_HasChoose_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn_ClassBorrow_Click(object sender, EventArgs e)
+        {
+            ClassBorrow classBorrow = new ClassBorrow();
+            classBorrow.Show();
         }
     }
     }
