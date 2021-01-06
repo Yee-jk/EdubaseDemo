@@ -23,10 +23,20 @@ namespace Login
             SqlHelper sqlHelper = new SqlHelper();
             int result = sqlHelper.QuickReturn<int>(Search);
             if (result == 1)
-            {              
-                Center center = new Center(this.textBox_No.Text);
-                center.Show();
-                this.Close();
+            {
+                if (textBox_No.Text.Length==7)
+                {
+                    TeacherSeeEvaluate teacherSeeEvaluate = new TeacherSeeEvaluate(this.textBox_No.Text);
+                    teacherSeeEvaluate.Show();
+                    this.Close();
+                }
+                else
+                {
+                    Center center = new Center(this.textBox_No.Text);
+                    center.Show();
+                    this.Close();
+                }
+                
             }
             else
             {

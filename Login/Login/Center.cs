@@ -54,9 +54,9 @@ namespace Login
             dgv_ScoreInquiry.Visible = false;
             gb_ScoreInquiry.Visible = false;
             gb_SearchCourse.Visible = false;
-            gb_GradeMark.Visible = false;
             groupBox4.Visible = false;
             gb_Confirm.Visible = false;
+            gb_Command.Visible = false;
             tb_Show.Text = "增加";
             string Search1 = @"SELECT
                                 *
@@ -292,88 +292,15 @@ namespace Login
 
         private void btn_ScoreInquiry_Click(object sender, EventArgs e)
         {
-            cb_StartTime.SelectedItem = "---请选择---";
-            cb_CourseNature.SelectedItem= "---请选择---";
-            dgv_WarnQuary.Visible = false;
-            dgv_Transaction.Visible = false;
-            dgv_ScoreInquiry.Visible = false;
-            gb_ScoreInquiry.Visible = true;
-            dgv_infoManagement.Visible = false;
-            tb_Show.Visible = false;
+            StudentAchievement studentAchievement = new StudentAchievement(Studentid);
+            studentAchievement.Show();
+            
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            dgv_ScoreInquiry.Visible = true;
-            gb_ScoreInquiry.Visible = false;
-            dgv_ScoreInquiry.Rows.Clear();
-            if (tb_CourseName.Text!="")
-            {
-                String Search = $@"SELECT *
-                                   FROM dbo.tb_CourseGrade	  AS CG
-                                  WHERE CG.CourseName='{tb_CourseName.Text}';";
-                SqlHelper sqlHelper = new SqlHelper();
-                sqlHelper.QuickRead(Search);
-                while (sqlHelper.HasRecord)
-                {
-                    int index = this.dgv_ScoreInquiry.Rows.Add();
-                    dgv_ScoreInquiry.Rows[index].Cells[0].Value = sqlHelper["Term"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[1].Value = sqlHelper["CourseNo"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[2].Value = sqlHelper["CourseName"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[3].Value = sqlHelper["Grade"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[4].Value = sqlHelper["Credit"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[5].Value = sqlHelper["TotalHour"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[6].Value = sqlHelper["ExamWay"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[7].Value = sqlHelper["CourseAttribute"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[8].Value = sqlHelper["CourseNature"].ToString();
-                }
-                return;
-            }
-            if (cb_StartTime.SelectedItem.ToString() == "---请选择---"&& cb_CourseNature.SelectedItem.ToString() != "---请选择---")
-            {
-                String Search = $@"SELECT *
-                                   FROM dbo.tb_CourseGrade	  AS CG
-                                  WHERE CG.CourseNature='{cb_CourseNature.SelectedItem}';";
-                SqlHelper sqlHelper = new SqlHelper();
-                sqlHelper.QuickRead(Search);
-                while (sqlHelper.HasRecord)
-                {
-                    int index = this.dgv_ScoreInquiry.Rows.Add();
-                    dgv_ScoreInquiry.Rows[index].Cells[0].Value = sqlHelper["Term"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[1].Value = sqlHelper["CourseNo"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[2].Value = sqlHelper["CourseName"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[3].Value = sqlHelper["Grade"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[4].Value = sqlHelper["Credit"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[5].Value = sqlHelper["TotalHour"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[6].Value = sqlHelper["ExamWay"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[7].Value = sqlHelper["CourseAttribute"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[8].Value = sqlHelper["CourseNature"].ToString();
-                }
-            }
-            if (cb_StartTime.SelectedItem.ToString() == "---请选择---" && cb_CourseNature.SelectedItem.ToString() == "---请选择---")
-            {
-                String Search = $@"SELECT
-                                *
-                            FROM
-	                            dbo.tb_CourseGrade;";
-                SqlHelper sqlHelper = new SqlHelper();
-                sqlHelper.QuickRead(Search);
-                while (sqlHelper.HasRecord)
-                {
-                    int index = this.dgv_ScoreInquiry.Rows.Add();
-                    dgv_ScoreInquiry.Rows[index].Cells[0].Value = sqlHelper["Term"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[1].Value = sqlHelper["CourseNo"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[2].Value = sqlHelper["CourseName"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[3].Value = sqlHelper["Grade"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[4].Value = sqlHelper["Credit"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[5].Value = sqlHelper["TotalHour"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[6].Value = sqlHelper["ExamWay"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[7].Value = sqlHelper["CourseAttribute"].ToString();
-                    dgv_ScoreInquiry.Rows[index].Cells[8].Value = sqlHelper["CourseNature"].ToString();
-                }
-            }
+            
         }
-
         private void btn_infoManagement_Click(object sender, EventArgs e)
         {
             dgv_WarnQuary.Visible = false;
@@ -665,6 +592,89 @@ namespace Login
         {
             ClassBorrow classBorrow = new ClassBorrow();
             classBorrow.Show();
+        }
+
+        private void btn_BookOrder_Click(object sender, EventArgs e)
+        {
+            BookOrder bookOrder = new BookOrder();
+            bookOrder.Show();
+        }
+
+        private void ShowPublicCourse_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            StudentBookChoose studentBookChoose = new StudentBookChoose();
+            studentBookChoose.Show();
+        }
+        private void Search()
+        {
+            SqlHelper sqlHelper = new SqlHelper();
+            string teacherEvaluate = $@"SELECT
+	                                        CG.Term AS 学期,
+	                                        TE.TeacherNo AS 教师工号,
+	                                        TE.CourseNo AS 课程号,
+	                                        CG.CourseName AS 课程名称,
+	                                        TE.State AS 状态
+	                                     From tb_TeacherEvaluate AS TE
+	                                        JOIN tb_CourseGrade AS CG on TE.CourseNo=CG.CourseNo;";
+            sqlHelper.QuickFill(teacherEvaluate, this.dgv_StudentComment);
+        }
+        private void btn_StudentComment_Click(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void dgv_StudentComment_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            gb_Command.Visible = true;
+
+        }
+
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            SqlHelper sqlHelper = new SqlHelper();
+            sqlHelper.QuickSubmit($@"UPDATE tb_TeacherEvaluate	SET				
+		                                Score={cb_Score.SelectedItem.ToString()}			
+		                                ,Evaluate={tb_Command.Text}
+                                        ,State='已评教'
+                                       FROM tb_TeacherEvaluate AS TE
+                                        WHERE TE.TeacherNo={this.dgv_StudentComment.CurrentRow.Cells["教师工号"].Value.ToString()};");
+            gb_Command.Visible = false;
+            tb_Command.Text = "";
+            this.Search();
+        }
+
+        private void btn_Appointment_Click(object sender, EventArgs e)
+        {
+            SqlHelper sqlHelper = new SqlHelper();
+            string appointment = $@"SELECT
+	                                    E.ItemId
+	                                    ,E.ItemName
+	                                    ,E.Room 
+	                                    ,E.Week 
+	                                    ,SA.State 
+                                    FROM tb_Experimrnt AS E
+                                    JOIN tb_AppointState AS SA ON SA.StudentId=E.StudentId  AND E.ItemId=SA.ItemId;";
+            sqlHelper.QuickRead(appointment);
+            while (sqlHelper.HasRecord)
+            {               
+                int index = this.dgv_Appointment.Rows.Add();
+                dgv_Appointment.Rows[index].Cells[0].Value = sqlHelper["ItemId"].ToString();
+                dgv_Appointment.Rows[index].Cells[1].Value = sqlHelper["ItemName"].ToString();
+                dgv_Appointment.Rows[index].Cells[2].Value = sqlHelper["Room"].ToString();
+                dgv_Appointment.Rows[index].Cells[3].Value = sqlHelper["Week"].ToString();
+                dgv_Appointment.Rows[index].Cells[4].Value = sqlHelper["State"].ToString();
+            }
+
+        }
+
+        private void dgv_Appointment_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     }

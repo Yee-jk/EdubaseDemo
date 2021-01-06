@@ -124,18 +124,14 @@
             this.Btn_Leavemessage = new System.Windows.Forms.Button();
             this.Btn_Notice = new System.Windows.Forms.Button();
             this.dgv_Notice = new System.Windows.Forms.DataGridView();
+            this.NoticeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.操作 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.gb_GradeMark = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_ScoreInquiry = new System.Windows.Forms.GroupBox();
             this.tb_CourseName = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
@@ -223,7 +219,7 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button27 = new System.Windows.Forms.Button();
+            this.btn_BookOrder = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -280,13 +276,26 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.NoticeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.操作 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gb_Command = new System.Windows.Forms.GroupBox();
+            this.btn_Submit = new System.Windows.Forms.Button();
+            this.tb_Command = new System.Windows.Forms.TextBox();
+            this.cb_Score = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.dgv_StudentComment = new System.Windows.Forms.DataGridView();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.btn_StudentComment = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.btn_Appointment = new System.Windows.Forms.Button();
+            this.dgv_Appointment = new System.Windows.Forms.DataGridView();
+            this.Column47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Appoint = new System.Windows.Forms.Button();
+            this.Cencal = new System.Windows.Forms.Button();
             this.tabControl_Center.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -313,8 +322,6 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Notice)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.gb_GradeMark.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.gb_ScoreInquiry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ScoreInquiry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Transaction)).BeginInit();
@@ -337,6 +344,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SocialExam)).BeginInit();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.gb_Command.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StudentComment)).BeginInit();
+            this.groupBox11.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointment)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_Center
@@ -347,6 +361,7 @@
             this.tabControl_Center.Controls.Add(this.tabPage3);
             this.tabControl_Center.Controls.Add(this.tabPage4);
             this.tabControl_Center.Controls.Add(this.tabPage5);
+            this.tabControl_Center.Controls.Add(this.tabPage6);
             this.tabControl_Center.Location = new System.Drawing.Point(0, 0);
             this.tabControl_Center.Name = "tabControl_Center";
             this.tabControl_Center.SelectedIndex = 0;
@@ -1295,9 +1310,53 @@
             this.dgv_Notice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Notice_CellContentClick);
             this.dgv_Notice.DoubleClick += new System.EventHandler(this.dgv_Notice_DoubleClick);
             // 
+            // NoticeId
+            // 
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.NoticeId.DefaultCellStyle = dataGridViewCellStyle5;
+            this.NoticeId.HeaderText = "序号";
+            this.NoticeId.Name = "NoticeId";
+            this.NoticeId.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "标题";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "类别";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "发送人";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "发送时间";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // 操作
+            // 
+            this.操作.HeaderText = "操作";
+            this.操作.Name = "操作";
+            // 
+            // Column38
+            // 
+            this.Column38.HeaderText = "回复";
+            this.Column38.Name = "Column38";
+            this.Column38.ReadOnly = true;
+            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.gb_GradeMark);
             this.tabPage2.Controls.Add(this.gb_ScoreInquiry);
             this.tabPage2.Controls.Add(this.dgv_ScoreInquiry);
             this.tabPage2.Controls.Add(this.dgv_Transaction);
@@ -1314,82 +1373,6 @@
             this.tabPage2.Text = "学籍成绩";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // gb_GradeMark
-            // 
-            this.gb_GradeMark.Controls.Add(this.dataGridView3);
-            this.gb_GradeMark.Location = new System.Drawing.Point(259, 410);
-            this.gb_GradeMark.Name = "gb_GradeMark";
-            this.gb_GradeMark.Size = new System.Drawing.Size(1067, 305);
-            this.gb_GradeMark.TabIndex = 20;
-            this.gb_GradeMark.TabStop = false;
-            this.gb_GradeMark.Text = "等级考试成绩";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column50,
-            this.Column51,
-            this.Column52,
-            this.Column53,
-            this.Column54,
-            this.Column55,
-            this.Column56,
-            this.Column57,
-            this.Column58});
-            this.dataGridView3.Location = new System.Drawing.Point(60, 132);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 27;
-            this.dataGridView3.Size = new System.Drawing.Size(944, 150);
-            this.dataGridView3.TabIndex = 19;
-            // 
-            // Column50
-            // 
-            this.Column50.HeaderText = "";
-            this.Column50.Name = "Column50";
-            this.Column50.Width = 50;
-            // 
-            // Column51
-            // 
-            this.Column51.HeaderText = "";
-            this.Column51.Name = "Column51";
-            this.Column51.Width = 250;
-            // 
-            // Column52
-            // 
-            this.Column52.HeaderText = "";
-            this.Column52.Name = "Column52";
-            // 
-            // Column53
-            // 
-            this.Column53.HeaderText = "";
-            this.Column53.Name = "Column53";
-            // 
-            // Column54
-            // 
-            this.Column54.HeaderText = "";
-            this.Column54.Name = "Column54";
-            // 
-            // Column55
-            // 
-            this.Column55.HeaderText = "";
-            this.Column55.Name = "Column55";
-            // 
-            // Column56
-            // 
-            this.Column56.HeaderText = "";
-            this.Column56.Name = "Column56";
-            // 
-            // Column57
-            // 
-            this.Column57.HeaderText = "";
-            this.Column57.Name = "Column57";
-            // 
-            // Column58
-            // 
-            this.Column58.HeaderText = "";
-            this.Column58.Name = "Column58";
             // 
             // gb_ScoreInquiry
             // 
@@ -2083,6 +2066,7 @@
             this.ShowPublicCourse.RowTemplate.Height = 27;
             this.ShowPublicCourse.Size = new System.Drawing.Size(967, 322);
             this.ShowPublicCourse.TabIndex = 7;
+            this.ShowPublicCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ShowPublicCourse_CellContentClick);
             // 
             // CourseNo
             // 
@@ -2131,7 +2115,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.button27);
+            this.groupBox7.Controls.Add(this.btn_BookOrder);
             this.groupBox7.Controls.Add(this.button26);
             this.groupBox7.Controls.Add(this.button25);
             this.groupBox7.Location = new System.Drawing.Point(8, 722);
@@ -2141,14 +2125,15 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "教材管理";
             // 
-            // button27
+            // btn_BookOrder
             // 
-            this.button27.Location = new System.Drawing.Point(26, 92);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(135, 28);
-            this.button27.TabIndex = 19;
-            this.button27.Text = "教材征订";
-            this.button27.UseVisualStyleBackColor = true;
+            this.btn_BookOrder.Location = new System.Drawing.Point(26, 92);
+            this.btn_BookOrder.Name = "btn_BookOrder";
+            this.btn_BookOrder.Size = new System.Drawing.Size(135, 28);
+            this.btn_BookOrder.TabIndex = 19;
+            this.btn_BookOrder.Text = "教材征订";
+            this.btn_BookOrder.UseVisualStyleBackColor = true;
+            this.btn_BookOrder.Click += new System.EventHandler(this.btn_BookOrder_Click);
             // 
             // button26
             // 
@@ -2167,6 +2152,7 @@
             this.button25.TabIndex = 17;
             this.button25.Text = "学生教材选用";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // groupBox6
             // 
@@ -2425,7 +2411,7 @@
             this.gb_Confirm.Controls.Add(this.StudentName);
             this.gb_Confirm.Controls.Add(this.tb_StudentNumber);
             this.gb_Confirm.Controls.Add(this.StudentNumber);
-            this.gb_Confirm.Location = new System.Drawing.Point(408, 183);
+            this.gb_Confirm.Location = new System.Drawing.Point(464, 15);
             this.gb_Confirm.Name = "gb_Confirm";
             this.gb_Confirm.Size = new System.Drawing.Size(414, 290);
             this.gb_Confirm.TabIndex = 5;
@@ -2674,6 +2660,9 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.gb_Command);
+            this.tabPage5.Controls.Add(this.dgv_StudentComment);
+            this.tabPage5.Controls.Add(this.groupBox11);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -2682,50 +2671,197 @@
             this.tabPage5.Text = "教学评价";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // NoticeId
+            // gb_Command
             // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.NoticeId.DefaultCellStyle = dataGridViewCellStyle5;
-            this.NoticeId.HeaderText = "序号";
-            this.NoticeId.Name = "NoticeId";
-            this.NoticeId.ReadOnly = true;
+            this.gb_Command.Controls.Add(this.btn_Submit);
+            this.gb_Command.Controls.Add(this.tb_Command);
+            this.gb_Command.Controls.Add(this.cb_Score);
+            this.gb_Command.Controls.Add(this.label38);
+            this.gb_Command.Controls.Add(this.label26);
+            this.gb_Command.Location = new System.Drawing.Point(432, 8);
+            this.gb_Command.Name = "gb_Command";
+            this.gb_Command.Size = new System.Drawing.Size(421, 308);
+            this.gb_Command.TabIndex = 2;
+            this.gb_Command.TabStop = false;
+            this.gb_Command.Text = "评教";
             // 
-            // Column1
+            // btn_Submit
             // 
-            this.Column1.HeaderText = "标题";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 200;
+            this.btn_Submit.Location = new System.Drawing.Point(161, 167);
+            this.btn_Submit.Name = "btn_Submit";
+            this.btn_Submit.Size = new System.Drawing.Size(85, 43);
+            this.btn_Submit.TabIndex = 4;
+            this.btn_Submit.Text = "提交";
+            this.btn_Submit.UseVisualStyleBackColor = true;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
-            // Column2
+            // tb_Command
             // 
-            this.Column2.HeaderText = "类别";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.tb_Command.Location = new System.Drawing.Point(124, 98);
+            this.tb_Command.Multiline = true;
+            this.tb_Command.Name = "tb_Command";
+            this.tb_Command.Size = new System.Drawing.Size(154, 25);
+            this.tb_Command.TabIndex = 3;
             // 
-            // Column3
+            // cb_Score
             // 
-            this.Column3.HeaderText = "发送人";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.cb_Score.FormattingEnabled = true;
+            this.cb_Score.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cb_Score.Location = new System.Drawing.Point(124, 40);
+            this.cb_Score.Name = "cb_Score";
+            this.cb_Score.Size = new System.Drawing.Size(154, 23);
+            this.cb_Score.TabIndex = 2;
             // 
-            // Column4
+            // label38
             // 
-            this.Column4.HeaderText = "发送时间";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 200;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(75, 101);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(52, 15);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "评语：";
             // 
-            // 操作
+            // label26
             // 
-            this.操作.HeaderText = "操作";
-            this.操作.Name = "操作";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(75, 43);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(52, 15);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "评分：";
             // 
-            // Column38
+            // dgv_StudentComment
             // 
-            this.Column38.HeaderText = "回复";
-            this.Column38.Name = "Column38";
-            this.Column38.ReadOnly = true;
+            this.dgv_StudentComment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_StudentComment.Location = new System.Drawing.Point(195, 40);
+            this.dgv_StudentComment.Name = "dgv_StudentComment";
+            this.dgv_StudentComment.RowTemplate.Height = 27;
+            this.dgv_StudentComment.Size = new System.Drawing.Size(1185, 293);
+            this.dgv_StudentComment.TabIndex = 1;
+            this.dgv_StudentComment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_StudentComment_CellClick);
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.btn_StudentComment);
+            this.groupBox11.Location = new System.Drawing.Point(8, 8);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(181, 80);
+            this.groupBox11.TabIndex = 0;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "教学评价";
+            // 
+            // btn_StudentComment
+            // 
+            this.btn_StudentComment.Location = new System.Drawing.Point(16, 32);
+            this.btn_StudentComment.Name = "btn_StudentComment";
+            this.btn_StudentComment.Size = new System.Drawing.Size(143, 26);
+            this.btn_StudentComment.TabIndex = 1;
+            this.btn_StudentComment.Text = "学生评价";
+            this.btn_StudentComment.UseVisualStyleBackColor = true;
+            this.btn_StudentComment.Click += new System.EventHandler(this.btn_StudentComment_Click);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.Cencal);
+            this.tabPage6.Controls.Add(this.btn_Appoint);
+            this.tabPage6.Controls.Add(this.dgv_Appointment);
+            this.tabPage6.Controls.Add(this.groupBox12);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1462, 895);
+            this.tabPage6.TabIndex = 6;
+            this.tabPage6.Text = "实践环节";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.btn_Appointment);
+            this.groupBox12.Location = new System.Drawing.Point(6, 6);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(180, 91);
+            this.groupBox12.TabIndex = 0;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "实验教学";
+            // 
+            // btn_Appointment
+            // 
+            this.btn_Appointment.Location = new System.Drawing.Point(15, 35);
+            this.btn_Appointment.Name = "btn_Appointment";
+            this.btn_Appointment.Size = new System.Drawing.Size(142, 30);
+            this.btn_Appointment.TabIndex = 0;
+            this.btn_Appointment.Text = "实验预约管理";
+            this.btn_Appointment.UseVisualStyleBackColor = true;
+            this.btn_Appointment.Click += new System.EventHandler(this.btn_Appointment_Click);
+            // 
+            // dgv_Appointment
+            // 
+            this.dgv_Appointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Appointment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column47,
+            this.Column48,
+            this.Column49,
+            this.Column50,
+            this.State});
+            this.dgv_Appointment.Location = new System.Drawing.Point(208, 15);
+            this.dgv_Appointment.Name = "dgv_Appointment";
+            this.dgv_Appointment.RowTemplate.Height = 27;
+            this.dgv_Appointment.Size = new System.Drawing.Size(918, 226);
+            this.dgv_Appointment.TabIndex = 1;
+            this.dgv_Appointment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Appointment_CellContentClick);
+            // 
+            // Column47
+            // 
+            this.Column47.HeaderText = "实验编号";
+            this.Column47.Name = "Column47";
+            this.Column47.ReadOnly = true;
+            // 
+            // Column48
+            // 
+            this.Column48.HeaderText = "实验名称";
+            this.Column48.Name = "Column48";
+            this.Column48.ReadOnly = true;
+            // 
+            // Column49
+            // 
+            this.Column49.HeaderText = "教室";
+            this.Column49.Name = "Column49";
+            this.Column49.ReadOnly = true;
+            // 
+            // Column50
+            // 
+            this.Column50.HeaderText = "时间";
+            this.Column50.Name = "Column50";
+            this.Column50.ReadOnly = true;
+            // 
+            // State
+            // 
+            this.State.HeaderText = "状态";
+            this.State.Name = "State";
+            this.State.ReadOnly = true;
+            // 
+            // btn_Appoint
+            // 
+            this.btn_Appoint.Location = new System.Drawing.Point(1180, 139);
+            this.btn_Appoint.Name = "btn_Appoint";
+            this.btn_Appoint.Size = new System.Drawing.Size(84, 40);
+            this.btn_Appoint.TabIndex = 1;
+            this.btn_Appoint.Text = "预约";
+            this.btn_Appoint.UseVisualStyleBackColor = true;
+            // 
+            // Cencal
+            // 
+            this.Cencal.Location = new System.Drawing.Point(1180, 201);
+            this.Cencal.Name = "Cencal";
+            this.Cencal.Size = new System.Drawing.Size(84, 40);
+            this.Cencal.TabIndex = 2;
+            this.Cencal.Text = "取消预约";
+            this.Cencal.UseVisualStyleBackColor = true;
             // 
             // Center
             // 
@@ -2769,8 +2905,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Notice)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.gb_GradeMark.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.gb_ScoreInquiry.ResumeLayout(false);
             this.gb_ScoreInquiry.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ScoreInquiry)).EndInit();
@@ -2797,6 +2931,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SocialExam)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.gb_Command.ResumeLayout(false);
+            this.gb_Command.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StudentComment)).EndInit();
+            this.groupBox11.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointment)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2877,7 +3019,7 @@
         private System.Windows.Forms.Button btn_infoManagement;
         private System.Windows.Forms.Button btn_StudentCard;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button btn_BookOrder;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -2948,17 +3090,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column35;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column36;
         private System.Windows.Forms.TextBox tb_CourseName;
-        private System.Windows.Forms.GroupBox gb_GradeMark;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column50;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column51;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column52;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column53;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column54;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column55;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column56;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column57;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column58;
         private System.Windows.Forms.GroupBox gb_SearchCourse;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label32;
@@ -3054,5 +3185,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn 操作;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column38;
+        private System.Windows.Forms.DataGridView dgv_StudentComment;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Button btn_StudentComment;
+        private System.Windows.Forms.GroupBox gb_Command;
+        private System.Windows.Forms.Button btn_Submit;
+        private System.Windows.Forms.TextBox tb_Command;
+        private System.Windows.Forms.ComboBox cb_Score;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.DataGridView dgv_Appointment;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Button btn_Appointment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column48;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column50;
+        private System.Windows.Forms.DataGridViewTextBoxColumn State;
+        private System.Windows.Forms.Button Cencal;
+        private System.Windows.Forms.Button btn_Appoint;
     }
 }
